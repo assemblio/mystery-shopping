@@ -58,7 +58,7 @@ function drawAsterChart(chart_data, suffix) {
     var width = 500,
         height = 410,
         radius = Math.min(width, height) / 2,
-        innerRadius = 0.3 * radius;
+        innerRadius = 0.33 * radius;
 
     var pie = d3.layout.pie()
         .sort(null)
@@ -124,11 +124,64 @@ function drawAsterChart(chart_data, suffix) {
             return a + b.weight;
         }, 0);
 
-    svg.append("svg:text")
-        .attr("class", "aster-score")
-        .attr("dy", ".35em")
-        .style("font-size", "42px")
-        .style("font-weight", "bold")
-        .attr("text-anchor", "middle") // text-align: right
-        .text("100");
+    var fulltext = "Kosovo Tax Administration";
+	addDescriptionToAsterChart(fulltext, svg);
+}
+
+// Adds description in the middle of the aster chart and regulates the size of text.
+function addDescriptionToAsterChart(fulltext, svg){
+	var json_position = {
+		0: -38,
+		1: -18,
+		2: 2,
+		3: 22,
+		4: 42,
+		5: 62,
+	}
+	var a = "";
+	if (fulltext.length > 11){
+		a = fulltext.match(/.{6}\S*|.*/g);
+	} else if (fulltext.length == 8) {
+		a = fulltext.match(/.{4}\S*|.*/g);
+	} else if (fulltext.length == 9) {
+		a = fulltext.match(/.{3}\S*|.*/g);
+	} else if (fulltext.length == 10) {
+		a = fulltext.match(/.{4}\S*|.*/g);
+	} else {
+		a = fulltext.match(/.{5}\S*|.*/g);
+	}
+	var index = 0;
+	if (a.length <= 2) {
+		index = 2;
+	} else if (a.length == 3) {
+		index = 1;
+	} else if (a.length >= 4 && a.length <= 5) {
+		index = 1;
+	} else {
+		index = 0;
+	}
+
+	var r = /\d+/;
+	// alert (s.match(r));
+	a.forEach(function(entry) {
+		if (entry.match(r)){
+			var text = svg.append("svg:text")
+			.attr("class", "aster-score")
+			.attr("dy", json_position[index])
+			.attr("text-anchor", "middle")
+			.style("font-size", "14px")
+			// .style("fill", "red")
+			.style("font-weight", "bold")
+			.text(entry);
+		} else {
+			svg.append("svg:text")
+			.style("font-size", "14px")
+			.attr("class", "aster-score")
+			.attr("dy", json_position[index])
+			.attr("text-anchor", "middle")
+			.text(entry);
+		}
+		index = index + 1;
+	});
+	// $(".aster-score-percentage").css("color", "red")
 }
