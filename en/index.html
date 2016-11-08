@@ -1,0 +1,91 @@
+---
+layout: default
+language: english
+---
+
+<script>
+    var data = {
+        "Kosovo Tax Administration": {
+            "A02": {
+                "answer": {
+                    "Equipping with Fiscal Number Certificate for Individual Business": [16, 12],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person)": [20, 25],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person) -FOREIGN COMPANY": [7, 12],
+                    "Registration of VAT taxpayer - Declarer of VAT, in the system of TAK": [15, 10],
+                    "The registration of VAT taxpayer - Declarer of VAT (volunteer from the first day of registration)": [5, 9]
+                },
+                "question": "How many days before did you make the application?"
+            },
+            "A1": {
+                "answer": {
+                    "Equipping with Fiscal Number Certificate for Individual Business": [60, 45],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person)": [30, 25],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person) -FOREIGN COMPANY": [55, 60],
+                    "Registration of VAT taxpayer - Declarer of VAT, in the system of TAK": [20, 30],
+                    "The registration of VAT taxpayer - Declarer of VAT (volunteer from the first day of registration)": [25, 35]
+                },
+                "question": "How long did you wait in the queue?"
+            },
+            "A2": {
+                "answer": {
+                    "Equipping with Fiscal Number Certificate for Individual Business": [25, 15],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person)": [20, 10],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person) -FOREIGN COMPANY": [15, 20],
+                    "Registration of VAT taxpayer - Declarer of VAT, in the system of TAK": [10, 6],
+                    "The registration of VAT taxpayer - Declarer of VAT (volunteer from the first day of registration)": [20, 12]
+                },
+                "question": "How many customers/people were before you in the queue?"
+            },
+            "A3": {
+                "answer": {
+                    "Equipping with Fiscal Number Certificate for Individual Business": [15, 5],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person)": [25, 10],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person) -FOREIGN COMPANY": [10, 8],
+                    "Registration of VAT taxpayer - Declarer of VAT, in the system of TAK": [25, 20],
+                    "The registration of VAT taxpayer - Declarer of VAT (volunteer from the first day of registration)": [20, 12]
+                },
+                "question": "What's the interaction duration time?"
+            },
+            "A4": {
+                "answer": {
+                    "Equipping with Fiscal Number Certificate for Individual Business": [3, 5],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person)": [5, 4],
+                    "Equipping with Fiscal Number Certificate for  Non-Individual Business (Legal Person) -FOREIGN COMPANY": [1, 2],
+                    "Registration of VAT taxpayer - Declarer of VAT, in the system of TAK": [3, 7],
+                    "The registration of VAT taxpayer - Declarer of VAT (volunteer from the first day of registration)": [1, 3]
+                },
+                "question": "How many times did you visit the office to receive the service/document?"
+            }
+        }
+    };
+
+    var suffix = {
+        "A02": "days",
+        "A1": "minutes",
+        "A2": "people",
+        "A3": "minutes",
+        "A4": "times"
+    };
+
+    $(function () {
+
+        drawAsterChart(data["Kosovo Tax Administration"]["A02"]["answer"], suffix["A02"]);
+        $("input[name='tabs']").change(function () {
+            var selected_question = $("#question-select").val();
+            drawAsterChart(data["Kosovo Tax Administration"][selected_question]["answer"], suffix[selected_question]);
+        });
+
+        $("#question-select").change(function () {
+            var selected_question = $(this).val();
+            drawAsterChart(data["Kosovo Tax Administration"][selected_question]["answer"], suffix[selected_question]);
+        })
+    })
+</script>
+<div class="row" style="text-align: center;">
+    {% include sections.html language=page.language %}
+    <br>
+    <div class="aster-chart-container" style="text-align: center; margin: 0 auto;">
+
+    </div>
+    <script src="../static/js/draw.js"></script>
+</div>

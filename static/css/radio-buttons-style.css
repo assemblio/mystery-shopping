@@ -1,0 +1,159 @@
+.tabs {
+    max-width: 95%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 5px auto;
+    z-index: 1;
+    /*border-bottom: 4px solid #7a7a7a;*/
+}
+
+.tabs:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.tabs input[type=radio] {
+    display: none;
+}
+
+.tabs span {
+    font-size: 12px;
+}
+
+.tabs label {
+    display: block;
+    float: left;
+    width: 25%;
+    color: #7a7a7a;
+    font-size: 27px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2;
+    cursor: pointer;
+    box-shadow: inset 0 4px #7a7a7a;
+    border-bottom: 4px solid #7a7a7a;
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+
+.bar-chart {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.tabs label span {
+    display: none;
+}
+
+.tabs label i {
+    padding: 5px;
+    margin-right: 0;
+}
+
+.tabs label:hover {
+    cursor: pointer;
+    background: #3D4237;
+    color: #fff;
+    box-shadow: inset 0 4px #090909;
+    border-bottom: 4px solid #090909;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/*The Animation*/
+/*As for the animation, we simple create a*/
+
+/*@keyframe that has 3 frames. 0%, 50% and 100%. At 0% the size of the content is 0.9, at 50% it’s 1.1 and at 100% it’s 100%. With this, we give the content a kind of “bounce” effect by making the content smaller, then bigger and then back to it’s original size.*/
+
+.tab-content * {
+    /*-webkit-animation: scale 0.7s ease-in-out;*/
+    /*-moz-animation: scale 0.7s ease-in-out;*/
+    /*animation: scale 0.7s ease-in-out;*/
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.01);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.tabs [id^="tab"]:checked + label {
+    background: #3D4237;
+    box-shadow: inset 0 4px #090909;
+    border-bottom: 4px solid #090909;
+    color: #fff;
+}
+
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4 {
+    display: block;
+}
+
+@media (max-width: 859px) {
+    .tabs label {
+        width: 20%;
+    }
+
+    .select {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .tabs {
+        margin-top: -25px;
+    }
+}
+
+@media (min-width: 859px) {
+    .form-inline .form-group {
+        margin-bottom: -17px !important;
+    }
+
+    .select {
+        width: 350px !important;
+    }
+
+    .tabs i {
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .tabs label {
+        width: 10%;
+    }
+
+    #piechart-tab-label {
+        margin-left: 25%;
+    }
+
+    .tabs label span {
+        display: inline-block;
+    }
+
+    .tabs {
+        /*max-width: 850px;*/
+    }
+}

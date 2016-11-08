@@ -1,0 +1,70 @@
+<div class="services">
+    <form class="form-inline service-form">
+        {% if page.language == "english" %}
+        <label for="service-select">Agency: </label>
+        {% else %}
+        <label for="service-select">Agjensioni: </label>
+        {% endif %}
+        <div class="form-group">
+            <select id="service-select" class="form-control select">
+                {% if page.language == "english" %}
+                <option value="Kosovo Tax Administration">Kosovo Tax Administration</option>
+                {% else %}
+                <option value="Kosovo Tax Administration">Kosovo Tax Administration</option>
+                {% endif %}
+            </select><br><br/>
+        </div>
+    </form>
+</div>
+<div class="tabs">
+    <input type="radio" name="tabs" value="pie-chart" id="tab1" checked>
+    <label for="tab1" id="piechart-tab-label">
+        <i class="fa fa-clock-o"></i><span></span>
+    </label>
+    <!-- Radio button and lable for #tab-content2 -->
+    <input type="radio" name="tabs" value="bar-chart" id="tab2">
+    <label for="tab2">
+        <i class="fa fa-handshake-o"></i><span></span>
+    </label>
+    <!-- Radio button and lable for #tab-content3 -->
+    <input type="radio" name="tabs" value="column-chart" id="tab3">
+    <label for="tab3">
+        <i class="fa fa-thumbs-o-up"></i><span></span>
+    </label>
+    <!-- Radio button and lable for #tab-content3 -->
+    <input type="radio" name="tabs" value="line-chart" id="tab4">
+    <label for="tab4">
+        <i class="fa fa-eur"></i><span></span>
+    </label>
+
+    <input type="radio" name="tabs" value="line-chart" id="tab5">
+    <label for="tab5">
+        <i class="fa fa-globe"></i><span></span>
+    </label>
+</div>
+<div class="questions">
+    <form class="form-inline question-form">
+        {% if page.language == "english" %}
+        <label for="question-select">Question: </label>
+        {% else %}
+        <label for="question-select">Pyetja: </label>
+        {% endif %}
+        <div class="form-group">
+            <select id="question-select" class="form-control select">
+                {% if page.language == "english" %}
+                <option value="A02">How many days before did you make the application?</option>
+                <option value="A1">How long did you wait in the queue?</option>
+                <option value="A2">How many customers/people were before you in the queue?</option>
+                <option value="A3">What's the interaction duration time?</option>
+                <option value="A4">How many times did you visit the office to receive the service/document?</option>
+                {% else %}
+                <option value="A02">How many days before did you make the application?</option>
+                <option value="A1">How long did you wait in the queue?</option>
+                <option value="A2">How many customers/people were before you in the queue?</option>
+                <option value="A3">What's the interaction duration time?</option>
+                <option value="A4">How many times did you visit the office to receive the service/document?</option>
+                {% endif %}
+            </select><br><br/>
+        </div>
+    </form>
+</div>
