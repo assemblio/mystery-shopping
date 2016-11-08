@@ -22,22 +22,22 @@
         <i class="fa fa-clock-o"></i><span></span>
     </label>
     <!-- Radio button and lable for #tab-content2 -->
-    <input type="radio" name="tabs" value="bar-chart" id="tab2">
+    <input type="radio" name="tabs" value="bar-chart" id="tab2" disabled>
     <label for="tab2">
         <i class="fa fa-handshake-o"></i><span></span>
     </label>
     <!-- Radio button and lable for #tab-content3 -->
-    <input type="radio" name="tabs" value="column-chart" id="tab3">
+    <input type="radio" name="tabs" value="column-chart" id="tab3" disabled>
     <label for="tab3">
         <i class="fa fa-thumbs-o-up"></i><span></span>
     </label>
     <!-- Radio button and lable for #tab-content3 -->
-    <input type="radio" name="tabs" value="line-chart" id="tab4">
+    <input type="radio" name="tabs" value="line-chart" id="tab4" disabled>
     <label for="tab4">
         <i class="fa fa-eur"></i><span></span>
     </label>
 
-    <input type="radio" name="tabs" value="line-chart" id="tab5">
+    <input type="radio" name="tabs" value="line-chart" id="tab5" disabled>
     <label for="tab5">
         <i class="fa fa-globe"></i><span></span>
     </label>
@@ -45,9 +45,9 @@
 <div class="questions">
     <form class="form-inline question-form">
         {% if page.language == "english" %}
-        <label for="question-select">Question: </label>
+        <label for="question-select">Indicator: </label>
         {% else %}
-        <label for="question-select">Pyetja: </label>
+        <label for="question-select">Treguesi: </label>
         {% endif %}
         <div class="form-group">
             <select id="question-select" class="form-control select">
