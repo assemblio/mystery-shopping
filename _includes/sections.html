@@ -6,7 +6,11 @@
         <label for="service-select">Agjensioni: </label>
         {% endif %}
         <div class="form-group">
+            {% if page.language == "albanian" %}
+            <select id="service-select" class="form-control select" style="margin-right: 20px;">
+                {% else %}
             <select id="service-select" class="form-control select">
+            {% endif %}
                 {% if page.language == "english" %}
                 <option value="Kosovo Tax Administration">Kosovo Tax Administration</option>
                 {% else %}

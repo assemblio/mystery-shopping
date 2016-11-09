@@ -132,8 +132,12 @@
         margin-bottom: -17px !important;
     }
 
+    #service-select {
+        margin-right: -20px;
+    }
+
     .select {
-        width: 350px !important;
+        width: 400px !important;
     }
 
     .tabs i {

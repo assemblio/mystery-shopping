@@ -56,9 +56,15 @@ function drawAsterChart(chart_data, suffix) {
     });
 
     var width = 500,
-        height = 410,
-        radius = Math.min(width, height) / 2,
-        innerRadius = 0.33 * radius;
+        height = 450;
+
+    if (window.screen.width < 480) {
+        width = 350;
+        height = 280;
+    }
+
+    var radius = Math.min(width, height) / 2,
+        innerRadius = 0.355 * radius;
 
     var pie = d3.layout.pie()
         .sort(null)
@@ -124,8 +130,10 @@ function drawAsterChart(chart_data, suffix) {
             return a + b.weight;
         }, 0);
 
-    var fulltext = "Kosovo Tax Administration";
-	addDescriptionToAsterChart(fulltext, svg);
+    var fulltext = "Kosovo Tax Administration 20%";
+    if (window.screen.width > 480) {
+        addDescriptionToAsterChart(fulltext, svg);
+    }
 }
 
 // Adds description in the middle of the aster chart and regulates the size of text.
@@ -136,8 +144,8 @@ function addDescriptionToAsterChart(fulltext, svg){
 		2: 2,
 		3: 22,
 		4: 42,
-		5: 62,
-	}
+		5: 62
+	};
 	var a = "";
 	if (fulltext.length > 11){
 		a = fulltext.match(/.{6}\S*|.*/g);
@@ -167,18 +175,19 @@ function addDescriptionToAsterChart(fulltext, svg){
 		if (entry.match(r)){
 			var text = svg.append("svg:text")
 			.attr("class", "aster-score")
-			.attr("dy", json_position[index])
+			.attr("dy", json_position[index] + 10)
 			.attr("text-anchor", "middle")
-			.style("font-size", "14px")
+			.style("font-size", "22px")
 			// .style("fill", "red")
-			.style("font-weight", "bold")
+			.style("font-weight", "bolder")
 			.text(entry);
 		} else {
 			svg.append("svg:text")
-			.style("font-size", "14px")
+			.style("font-size", "13px")
 			.attr("class", "aster-score")
 			.attr("dy", json_position[index])
 			.attr("text-anchor", "middle")
+                .style("font-weight", "lighter")
 			.text(entry);
 		}
 		index = index + 1;
