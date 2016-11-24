@@ -14,14 +14,37 @@ body {
     shape-rendering: crispEdges;
 }
 
+.hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    width: 90%;
+    text-align: center;
+}
+
+.hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
 .bar {
     fill: orange;
 }
 
 .solidArc:hover {
-    fill: orange;
+    fill: orangered;
 }
 
+.error-label {
+    color: orangered;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 .solidArc {
     -moz-transition: all 0.5s;
@@ -82,6 +105,7 @@ body {
     outline: none;
     text-align: center;
 }
+
 .share-btn:hover {
     color: #363636;
     background-color: #fff;

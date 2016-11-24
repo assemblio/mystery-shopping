@@ -2,7 +2,11 @@ var values = [];
 function buildChartData(data) {
     values = [];
     var items_count = Object.keys(data).length;
-    var colors = generateColor("#E1514B", "#4D9DB4", items_count);
+    var colors = generateColor("#9E0041", "#4D9DB4", items_count / 2);
+    var next_colors = generateColor("#FB9F59", "#6CC4A4", items_count / 2);
+    for (var i = 0; i < next_colors.length; i++) {
+        colors.push(next_colors[i]);
+    }
     var chart_data = [];
     Object.keys(data).forEach(function (item, idx) {
         var json_item = {
@@ -17,7 +21,7 @@ function buildChartData(data) {
             avg_value += data[item][i];
         }
         avg_value = avg_value / data[item].length;
-        if (avg_value < 50) {
+        if (avg_value < 7) {
             json_item["weight"] = 0.5;
         } else {
             json_item["weight"] = 0.7;
@@ -32,16 +36,6 @@ function buildChartData(data) {
 Array.prototype.max = function () {
     return Math.max.apply(null, this);
 };
-
-// get random color hex
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
 
 // function drawAsterChart(data, suffix) {
 function drawAsterChart(chart_data, suffix) {
@@ -76,11 +70,15 @@ function drawAsterChart(chart_data, suffix) {
         .attr('class', 'd3-tip')
         .offset([0, 0])
         .html(function (d) {
-            return d.data.label + ": <b><span style='color:orangered;'>" + d.data.value + " " + suffix + "</span></b>";
+            var label = d.data.label + ": <b><span style='color:orangered;'>" + d.data.value;
+            if (suffix != undefined){
+                label +=  " " + suffix + "</span></b>"
+            }
+            return label;
         });
 
     // getting the maximum value for
-    var max = Math.max.apply(null, values) + 2;
+    var max = Math.max.apply(null, values) + 0.5;
     var arc = d3.svg.arc()
         .innerRadius(innerRadius)
         .outerRadius(function (d) {
@@ -106,7 +104,7 @@ function drawAsterChart(chart_data, suffix) {
         .attr("stroke", "black")
         .attr("class", "outlineArc")
         .transition().delay(function (d, i) {
-            return i * 100;
+            return i * 60;
         })
         .attr("d", outlineArc);
 
@@ -130,67 +128,67 @@ function drawAsterChart(chart_data, suffix) {
             return a + b.weight;
         }, 0);
 
-    var fulltext = "Kosovo Tax Administration 20%";
+    var fulltext = $("#agency-select").val();
     if (window.screen.width > 480) {
         addDescriptionToAsterChart(fulltext, svg);
     }
 }
 
 // Adds description in the middle of the aster chart and regulates the size of text.
-function addDescriptionToAsterChart(fulltext, svg){
-	var json_position = {
-		0: -38,
-		1: -18,
-		2: 2,
-		3: 22,
-		4: 42,
-		5: 62
-	};
-	var a = "";
-	if (fulltext.length > 11){
-		a = fulltext.match(/.{6}\S*|.*/g);
-	} else if (fulltext.length == 8) {
-		a = fulltext.match(/.{4}\S*|.*/g);
-	} else if (fulltext.length == 9) {
-		a = fulltext.match(/.{3}\S*|.*/g);
-	} else if (fulltext.length == 10) {
-		a = fulltext.match(/.{4}\S*|.*/g);
-	} else {
-		a = fulltext.match(/.{5}\S*|.*/g);
-	}
-	var index = 0;
-	if (a.length <= 2) {
-		index = 2;
-	} else if (a.length == 3) {
-		index = 1;
-	} else if (a.length >= 4 && a.length <= 5) {
-		index = 1;
-	} else {
-		index = 0;
-	}
+function addDescriptionToAsterChart(fulltext, svg) {
+    var json_position = {
+        0: -38,
+        1: -18,
+        2: 2,
+        3: 22,
+        4: 42,
+        5: 62
+    };
+    var a = "";
+    if (fulltext.length > 11) {
+        a = fulltext.match(/.{6}\S*|.*/g);
+    } else if (fulltext.length == 8) {
+        a = fulltext.match(/.{4}\S*|.*/g);
+    } else if (fulltext.length == 9) {
+        a = fulltext.match(/.{3}\S*|.*/g);
+    } else if (fulltext.length == 10) {
+        a = fulltext.match(/.{4}\S*|.*/g);
+    } else {
+        a = fulltext.match(/.{5}\S*|.*/g);
+    }
+    var index = 0;
+    if (a.length <= 2) {
+        index = 2;
+    } else if (a.length == 3) {
+        index = 1;
+    } else if (a.length >= 4 && a.length <= 5) {
+        index = 1;
+    } else {
+        index = 0;
+    }
 
-	var r = /\d+/;
-	// alert (s.match(r));
-	a.forEach(function(entry) {
-		if (entry.match(r)){
-			var text = svg.append("svg:text")
-			.attr("class", "aster-score")
-			.attr("dy", json_position[index] + 10)
-			.attr("text-anchor", "middle")
-			.style("font-size", "22px")
-			// .style("fill", "red")
-			.style("font-weight", "bolder")
-			.text(entry);
-		} else {
-			svg.append("svg:text")
-			.style("font-size", "13px")
-			.attr("class", "aster-score")
-			.attr("dy", json_position[index])
-			.attr("text-anchor", "middle")
+    var r = /\d+/;
+    // alert (s.match(r));
+    a.forEach(function (entry) {
+        if (entry.match(r)) {
+            var text = svg.append("svg:text")
+                .attr("class", "aster-score")
+                .attr("dy", json_position[index] + 5)
+                .attr("text-anchor", "middle")
+                .style("font-size", "18px")
+                // .style("fill", "red")
+                .style("font-weight", "bolder")
+                .text(entry);
+        } else {
+            svg.append("svg:text")
+                .style("font-size", "13px")
+                .attr("class", "aster-score")
+                .attr("dy", json_position[index])
+                .attr("text-anchor", "middle")
                 .style("font-weight", "lighter")
-			.text(entry);
-		}
-		index = index + 1;
-	});
-	// $(".aster-score-percentage").css("color", "red")
+                .text(entry);
+        }
+        index = index + 1;
+    });
+    // $(".aster-score-percentage").css("color", "red")
 }

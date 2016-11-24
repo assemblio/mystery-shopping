@@ -1,0 +1,55 @@
+
+body {
+    font-weight: 400;
+    background-color: #fff;
+    height: 700px;
+}
+
+#main {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+#sequence {
+    width: 900px;
+    height: 70px;
+    font-size: 12px;
+}
+
+#indicator-select {
+    width: 400px;
+    height: 40px;
+}
+
+#legend {
+    padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+    font-weight: 400;
+    fill: #fff;
+    font-size: 12px;
+}
+
+#chart {
+    position: relative;
+}
+
+#chart path {
+    stroke: #fff;
+}
+
+#explanation {
+    position: absolute;
+    top: 200px;
+    left: 42.5%;
+    width: 200px;
+    text-align: center;
+    color: #666;
+    z-index: -1;
+}
+
+#percentage {
+    font-size: 15px;
+}
