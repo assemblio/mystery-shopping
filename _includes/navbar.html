@@ -10,16 +10,16 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav left-nav">
                 {% if page.language == "albanian" %}
-                    <li class="active"><a href="../sq/index.html">Aggregated</a></li>
-                    <li><a href="../sq/sunburst.html">Disaggregated</a></li>
+                    <li class="active"><a href="../sq/index.html">Disaggregated</a></li>
+                    <li><a href="../sq/sunburst.html">Aggregated</a></li>
                 {% elsif page.language == "serbian" %}
-                    <li class="active"><a href="../sr/index.html">Aggregated</a></li>
+                    <li class="active"><a href="../sr/index.html">Disaggregated</a></li>
                     <li><a href="../sr/sunburst.html">Disaggregated</a></li>
                 {% else %}
-                    <li class="active"><a href="../en/index.html">Aggregated</a></li>
-                    <li><a href="../en/sunburst.html">Disaggregated</a></li>
+                    <li class="active"><a href="../en/index.html">Disaggregated</a></li>
+                    <li><a href="../en/sunburst.html">Aggregated</a></li>
                 {% endif %}
                 <!-- <li><a href="indicators.html">Indikatori</a></li>
                 <li><a href="problems.html">Problemi</a></li> -->
