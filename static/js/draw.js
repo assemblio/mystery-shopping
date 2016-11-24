@@ -71,8 +71,8 @@ function drawAsterChart(chart_data, suffix) {
         .offset([0, 0])
         .html(function (d) {
             var label = d.data.label + ": <b><span style='color:orangered;'>" + d.data.value;
-            if (suffix != undefined){
-                label +=  " " + suffix + "</span></b>"
+            if (suffix != undefined) {
+                label += " " + suffix + "</span></b>"
             }
             return label;
         });
@@ -128,7 +128,7 @@ function drawAsterChart(chart_data, suffix) {
             return a + b.weight;
         }, 0);
 
-    var fulltext = $("#agency-select").val();
+    var fulltext = $("#agency-select option:selected").text();
     if (window.screen.width > 480) {
         addDescriptionToAsterChart(fulltext, svg);
     }
@@ -171,13 +171,13 @@ function addDescriptionToAsterChart(fulltext, svg) {
     // alert (s.match(r));
     a.forEach(function (entry) {
         if (entry.match(r)) {
-            var text = svg.append("svg:text")
+            var text =
+            svg.append("svg:text")
+                .style("font-size", "13px")
                 .attr("class", "aster-score")
-                .attr("dy", json_position[index] + 5)
+                .attr("dy", json_position[index])
                 .attr("text-anchor", "middle")
-                .style("font-size", "18px")
-                // .style("fill", "red")
-                .style("font-weight", "bolder")
+                .style("font-weight", "lighter")
                 .text(entry);
         } else {
             svg.append("svg:text")

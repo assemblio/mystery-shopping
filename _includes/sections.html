@@ -8,74 +8,40 @@
         <div class="form-group">
             {% if page.language == "albanian" %}
             <select id="agency-select" class="form-control select" style="margin-right: 20px;">
+            {% else %}
+            <select id="agency-select" class="form-control select">
+            {% endif %}
+                {% if page.language == "english" %}
+                <option value="Agency for Civil Registration">Agency for Civil Registration</option>
+                <option value="Agency for Business Registration">Agency for Business Registration</option>
+                <option value="Agency for Medicine and Medical Equipment">Agency for Medicine and Medical Equipment
+                </option>
+                <option value="Kosovo Customs">Kosovo Customs</option>
+                <option value="Department of Higher Education">Department of Higher Education</option>
+                <option value="Department of Non-Governmental Organizations - DONGOs">Department of Non-Governmental Organizations - DONGOs
+                </option>
+                <option value="Departament of plant production and protection (DPPP)">Departament of plant production and protection (DPPP)
+                </option>
+                <option value="Department for regulation of petroleum market">Department for regulation of petroleum market
+                </option>
                 {% else %}
-                <select id="agency-select" class="form-control select">
-                    {% endif %}
-                    {% if page.language == "english" %}
-                    <option value="Agency for Civil Registration">Agency for Civil Registration</option>
-                    <option value="Agency for Business Registration">Agency for Business Registration</option>
-                    <option value="Agency for Medicine and Medical Equipment">Agency for Medicine and Medical
-                        Equipment
-                    </option>
-                    <option value="Kosovo Customs">Kosovo Customs</option>
-                    <option value="Department of Higher Education">Department of Higher Education</option>
-                    <option value="Department of Non-Governmental Organizations - DONGOs">Department of Non-Governmental
-                        Organizations - DONGOs
-                    </option>
-                    <option value="Departament of plant production and protection (DPPP)">Departament of plant
-                        production and protection (DPPP)
-                    </option>
-                    <option value="Department for regulation of petroleum market">Department for regulation of petroleum
-                        market
-                    </option>
-                    {% else %}
-                    <option value="Agency for Civil Registration">Agency for Civil Registration</option>
-                    <option value="Agency for Business Registration">Agency for Business Registration</option>
-                    <option value="Agency for Medicine and Medical Equipment">Agency for Medicine and Medical
-                        Equipment
-                    </option>
-                    <option value="Kosovo Customs">Kosovo Customs</option>
-                    <option value="Department of Higher Education">Department of Higher Education</option>
-                    <option value="Department of Non-Governmental Organizations - DONGOs">Department of Non-Governmental
-                        Organizations - DONGOs
-                    </option>
-                    <option value="Departament of plant production and protection (DPPP)">Departament of plant
-                        production and protection (DPPP)
-                    </option>
-                    <option value="Department for regulation of petroleum market">Department for regulation of petroleum
-                        market
-                    </option>
-                    {% endif %}
-                </select><br><br/>
+                <option value="Agency for Civil Registration">Agjencia e Regjistrimit Civil</option>
+                <option value="Agency for Business Registration">Agjencia e Regjistrimit të Bizneseve</option>
+                <option value="Agency for Medicine and Medical Equipment">Agjensioni për Produkte dhe Pajisje Mjekësore
+                </option>
+                <option value="Kosovo Customs">Dogana e Kosovës</option>
+                <option value="Department of Higher Education">Departamenti për arsim të lartë</option>
+                <option value="Department of Non-Governmental Organizations - DONGOs">Departamenti për Organizata Jo-Qeveritare
+                </option>
+                <option value="Departament of plant production and protection (DPPP)">Departamenti i Prodhimtarisë dhe Mbrojtjes së Bimëve
+                </option>
+                <option value="Department for regulation of petroleum market">Departamenti për Rregullimin e Tregut të Naftës
+                </option>
+                {% endif %}
+            </select><br><br/></select>
         </div>
     </form>
 </div>
-<!--<div class="tabs">-->
-    <!--<input type="radio" name="tabs" value="pie-chart" id="tab1" checked>-->
-    <!--<label for="tab1" id="piechart-tab-label">-->
-        <!--<i class="fa fa-clock-o"></i><span></span>-->
-    <!--</label>-->
-    <!--&lt;!&ndash; Radio button and lable for #tab-content2 &ndash;&gt;-->
-    <!--<input type="radio" name="tabs" value="bar-chart" id="tab2" disabled>-->
-    <!--<label for="tab2">-->
-        <!--<i class="fa fa-handshake-o"></i><span></span>-->
-    <!--</label>-->
-    <!--&lt;!&ndash; Radio button and lable for #tab-content3 &ndash;&gt;-->
-    <!--<input type="radio" name="tabs" value="column-chart" id="tab3" disabled>-->
-    <!--<label for="tab3">-->
-        <!--<i class="fa fa-thumbs-o-up"></i><span></span>-->
-    <!--</label>-->
-    <!--&lt;!&ndash; Radio button and lable for #tab-content3 &ndash;&gt;-->
-    <!--<input type="radio" name="tabs" value="line-chart" id="tab4" disabled>-->
-    <!--<label for="tab4">-->
-        <!--<i class="fa fa-eur"></i><span></span>-->
-    <!--</label>-->
-
-    <!--<input type="radio" name="tabs" value="line-chart" id="tab5" disabled>-->
-    <!--<label for="tab5">-->
-        <!--<i class="fa fa-globe"></i><span></span>-->
-    <!--</label>-->
-<!--</div>-->
 <div class="questions">
     <form class="form-inline question-form">
         {% if page.language == "english" %}
@@ -91,24 +57,44 @@
                 <option value="A2">How many customers/people were before you in the queue?</option>
                 <option value="A3">What's the interaction duration time?</option>
                 <option value="A4">How many times did you visit the office to receive the service/document?</option>
-                <option value="A5_A">How do you evaluate the accessibility of the office? Use a 1-5 scale, where 1=very hard and 5=very easy.</option>
-                <option value="A6">Using a 1 – 5 scale (where 1=very slow and 5=very fast), how do you evaluate the time required to receive the service/ information/ document?</option>
-                <option value="B13">After your interaction, how do you evaluate the speed of interaction (use a 1-5 scale, where 1=very slow and 5=very fast)</option>
+                <option value="A5_A">How do you evaluate the accessibility of the office? Use a 1-5 scale, where 1=very
+                    hard and 5=very easy.
+                </option>
+                <option value="A6">Using a 1 – 5 scale (where 1=very slow and 5=very fast), how do you evaluate the time
+                    required to receive the service/ information/ document?
+                </option>
+                <option value="B13">After your interaction, how do you evaluate the speed of interaction (use a 1-5
+                    scale, where 1=very slow and 5=very fast)
+                </option>
                 <option value="P4">What was the actual payment for the service/document?</option>
                 <option value="P5">How easy was for you to pay for this service/document</option>
-                <option value="P6">Please rank your level of satisfaction about the amount of payment for the service/document.</option>
+                <option value="P6">Please rank your level of satisfaction about the amount of payment for the
+                    service/document.
+                </option>
                 {% else %}
-                <option value="A02">How many days before did you make the application?</option>
-                <option value="A1">How long did you wait in the queue?</option>
-                <option value="A2">How many customers/people were before you in the queue?</option>
-                <option value="A3">What's the interaction duration time?</option>
-                <option value="A4">How many times did you visit the office to receive the service/document?</option>
-                <option value="A5_A">How do you evaluate the accessibility of the office? Use a 1-5 scale, where 1=very hard and 5=very easy.</option>
-                <option value="A6">Using a 1 – 5 scale (where 1=very slow and 5=very fast), how do you evaluate the time required to receive the service/ information/ document?</option>
-                <option value="B13">After your interaction, how do you evaluate the speed of interaction (use a 1-5 scale, where 1=very slow and 5=very fast)</option>
-                <option value="P4">What was the actual payment for the service/document?</option>
-                <option value="P5">How easy was for you to pay for this service/document</option>
-                <option value="P6">Please rank your level of satisfaction about the amount of payment for the service/document.</option>
+                <option value="A02">Para sa ditësh e keni bërë aplikimin?</option>
+                <option value="A1">Sa kohë pritët në radhë:</option>
+                <option value="A2">Sa persona ishin në radhë para jush?</option>
+                <option value="A3">Sa kohë zgjati ndërveprimi juaj me punonjësin e institucionit?</option>
+                <option value="A4">Sa herë iu desh të vizitonit këtë institucion për të marrë këtë
+                    shërbim/informacionin/dokumentin?
+                </option>
+                <option value="A5_A">Si do të vlerësonit në një shkallë nga 1 në 5 lehtësinë për të gjetur zyrën e cila
+                    ju duhej për të marr është shërbimin që kërkonit ku 1=Shumë e vështirë dhe 5=Shumë e lehtë:
+                </option>
+                <option value="A6">Si do te vlerësonit në një shkallë nga 1 në 5 kohën qe iu është dashur për të marrë
+                    këtë shërbim/informacionin/dokumentin, ku 1=Shumë e ngadaltë dhe 5=Shumë shpejtë:
+                </option>
+                <option value="B13">Pas përfundimit të veprimit si do të vlerësonit shpejtësinë e ndërveprimit në një
+                    shkallë nga 1 në5 ku 1=Shumë e ngadaltë dhe 5=Shumë e shpejtë
+                </option>
+                <option value="P4">Sa u pagua realisht për shërbimin/dokumentin?</option>
+                <option value="P5">Lidhur me lehtësinë e kryerjes së pagesës për këtë shërbim/dokument, sa e lehtë
+                    ishte?
+                </option>
+                <option value="P6">Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument?Vlerëso me një
+                    shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur
+                </option>
                 {% endif %}
             </select><br><br/>
         </div>

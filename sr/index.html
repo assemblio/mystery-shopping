@@ -1,11 +1,11 @@
 ---
 layout: default
-language: english
+language: serbian
 ---
 
 <script src="../static/js/script.js"></script>
 <script>
-    window.language = "en";
+    window.language = "sr";
 </script>
 <div class="row" style="text-align: center;">
     {% include sections.html language=page.language %}
@@ -14,9 +14,5 @@ language: english
     <div class="aster-chart-container" style="text-align: center; margin: 0 auto;">
 
     </div>
-    <div class="no-data-div" style="text-align: center; display: none; height: 400px;">
-        <br><br>
-        <h2 class="error-label">No Data Available for this indicator</h2>
-    </div>
-    <script src="../static/js/draw.js"></script>
+    <script src="../static/js/draw.js" ></script>
 </div>

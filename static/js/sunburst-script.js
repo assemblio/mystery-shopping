@@ -28,7 +28,8 @@ var data = {
                 "Certificate of life in Family Community": [4, 5],
                 "Issuance of apostille stamp for marriage certificate;": [4, 4]
             }
-        }, "question": "Please rank your level of satisfaction about the amount of payment for the service/document."
+        },
+        "question": "Please rank your level of satisfaction about the amount of payment for the service/document."
     },
     "P4": {
         "answer": {
@@ -118,7 +119,7 @@ var data = {
             },
             "Department for regulation of petroleum market": {
                 "License for import of diesel and diesel products as raw material for production of petroleum products.": [5, 5],
-                "License for import of oils under certain product.\n (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 5],
+                "License for import of oils under certain product.  (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 5],
                 "License for wholesale of kerosene": [4, 5]
             },
             "Kosovo Forestry Agency": {"Issuance of license for cutting in private forests (firewood, technical wood)": [4, 5]},
@@ -152,7 +153,7 @@ var data = {
                 "Issuance of apostille stamp for marriage certificate;": [4, 4]
             },
             "Department of educational administration": {"Request for recognition of documents of pre-university education from abroad": [4, 3]},
-            "Department of Industry": {"Certificate for categorization of\n hotel facilities": [4, 5]},
+            "Department of Industry": {"Certificate for categorization of hotel facilities": [4, 5]},
             "Department of Spatial Planning, Construction, Housing, Construction Division": {"Building permit": [5, 3]},
             "Agency for Medicine and Medical Equipment": {
                 "Marketing authorization for launching of medicinal products in Kosova": [4, 3],
@@ -235,7 +236,7 @@ var data = {
             },
             "Department for regulation of petroleum market": {
                 "License for import of diesel and diesel products as raw material for production of petroleum products.": [4, 5],
-                "License for import of oils under certain product.\n (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 5],
+                "License for import of oils under certain product.  (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 5],
                 "License for wholesale of kerosene": [4, 5]
             },
             "Kosovo Forestry Agency": {"Issuance of license for cutting in private forests (firewood, technical wood)": [4, 5]},
@@ -269,7 +270,7 @@ var data = {
                 "Issuance of apostille stamp for marriage certificate;": [5, 5]
             },
             "Department of educational administration": {"Request for recognition of documents of pre-university education from abroad": [3, 3]},
-            "Department of Industry": {"Certificate for categorization of\n hotel facilities": [3, 5]},
+            "Department of Industry": {"Certificate for categorization of  hotel facilities": [3, 5]},
             "Department of Spatial Planning, Construction, Housing, Construction Division": {"Building permit": [5, 5]},
             "Agency for Medicine and Medical Equipment": {
                 "Marketing authorization for launching of medicinal products in Kosova": [4, 5],
@@ -316,7 +317,7 @@ var data = {
             },
             "Department for regulation of petroleum market": {
                 "License for import of diesel and diesel products as raw material for production of petroleum products.": [4, 0],
-                "License for import of oils under certain product.\n (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [1, 0],
+                "License for import of oils under certain product.  (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [1, 0],
                 "License for wholesale of kerosene": [0, 0]
             },
             "Kosovo Forestry Agency": {"Issuance of license for cutting in private forests (firewood, technical wood)": [0, 0]},
@@ -350,7 +351,7 @@ var data = {
                 "Issuance of apostille stamp for marriage certificate;": [8, 0]
             },
             "Department of educational administration": {"Request for recognition of documents of pre-university education from abroad": [3, 6]},
-            "Department of Industry": {"Certificate for categorization of\n hotel facilities": [0, 0]},
+            "Department of Industry": {"Certificate for categorization of  hotel facilities": [0, 0]},
             "Department of Spatial Planning, Construction, Housing, Construction Division": {"Building permit": [4, 10]},
             "Agency for Medicine and Medical Equipment": {
                 "Marketing authorization for launching of medicinal products in Kosova": [0, 2],
@@ -396,7 +397,7 @@ var data = {
             },
             "Department for regulation of petroleum market": {
                 "License for import of diesel and diesel products as raw material for production of petroleum products.": [5, 15],
-                "License for import of oils under certain product.\n (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 7],
+                "License for import of oils under certain product.  (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 7],
                 "License for wholesale of kerosene": [20, 10]
             },
             "Kosovo Forestry Agency": {"Issuance of license for cutting in private forests (firewood, technical wood)": [9, 15]},
@@ -430,7 +431,7 @@ var data = {
                 "Issuance of apostille stamp for marriage certificate;": [4, 3]
             },
             "Department of educational administration": {"Request for recognition of documents of pre-university education from abroad": [5, 6]},
-            "Department of Industry": {"Certificate for categorization of\n hotel facilities": [5, 10]},
+            "Department of Industry": {"Certificate for categorization of  hotel facilities": [5, 10]},
             "Department of Spatial Planning, Construction, Housing, Construction Division": {"Building permit": [6, 3]},
             "Agency for Medicine and Medical Equipment": {
                 "Marketing authorization for launching of medicinal products in Kosova": [7, 3],
@@ -476,7 +477,7 @@ var data = {
             },
             "Department for regulation of petroleum market": {
                 "License for import of diesel and diesel products as raw material for production of petroleum products.": [1, 0],
-                "License for import of oils under certain product.\n (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [1, 0],
+                "License for import of oils under certain product.  (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [1, 0],
                 "License for wholesale of kerosene": [0, 0]
             },
             "Kosovo Forestry Agency": {"Issuance of license for cutting in private forests (firewood, technical wood)": [0, 0]},
@@ -510,7 +511,7 @@ var data = {
                 "Issuance of apostille stamp for marriage certificate;": [2, 0]
             },
             "Department of educational administration": {"Request for recognition of documents of pre-university education from abroad": [1, 2]},
-            "Department of Industry": {"Certificate for categorization of\n hotel facilities": [0, 0]},
+            "Department of Industry": {"Certificate for categorization of  hotel facilities": [0, 0]},
             "Department of Spatial Planning, Construction, Housing, Construction Division": {"Building permit": [1, 4]},
             "Agency for Medicine and Medical Equipment": {
                 "Marketing authorization for launching of medicinal products in Kosova": [0, 1],
@@ -556,7 +557,7 @@ var data = {
             },
             "Department for regulation of petroleum market": {
                 "License for import of diesel and diesel products as raw material for production of petroleum products.": [1, 1],
-                "License for import of oils under certain product.\n (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [1, 1],
+                "License for import of oils under certain product.  (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [1, 1],
                 "License for wholesale of kerosene": [1, 1]
             },
             "Kosovo Forestry Agency": {"Issuance of license for cutting in private forests (firewood, technical wood)": [1, 1]},
@@ -590,7 +591,7 @@ var data = {
                 "Issuance of apostille stamp for marriage certificate;": [2, 3]
             },
             "Department of educational administration": {"Request for recognition of documents of pre-university education from abroad": [1, 4]},
-            "Department of Industry": {"Certificate for categorization of\n hotel facilities": [1, 1]},
+            "Department of Industry": {"Certificate for categorization of  hotel facilities": [1, 1]},
             "Department of Spatial Planning, Construction, Housing, Construction Division": {"Building permit": [3, 3]},
             "Agency for Medicine and Medical Equipment": {
                 "Marketing authorization for launching of medicinal products in Kosova": [1, 1],
@@ -636,7 +637,7 @@ var data = {
             },
             "Department for regulation of petroleum market": {
                 "License for import of diesel and diesel products as raw material for production of petroleum products.": [5, 5],
-                "License for import of oils under certain product.\n (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 5],
+                "License for import of oils under certain product.  (Vehicles, lubricants, hydraulic, heat monitoring, anti-corrosion, electrical isolation, metal work, etc., or basic oils)": [5, 5],
                 "License for wholesale of kerosene": [4, 5]
             },
             "Kosovo Forestry Agency": {"Issuance of license for cutting in private forests (firewood, technical wood)": [3, 5]},
@@ -670,7 +671,7 @@ var data = {
                 "Issuance of apostille stamp for marriage certificate;": [4, 3]
             },
             "Department of educational administration": {"Request for recognition of documents of pre-university education from abroad": [3, 3]},
-            "Department of Industry": {"Certificate for categorization of\n hotel facilities": [3, 5]},
+            "Department of Industry": {"Certificate for categorization of  hotel facilities": [3, 5]},
             "Department of Spatial Planning, Construction, Housing, Construction Division": {"Building permit": [5, 4]},
             "Agency for Medicine and Medical Equipment": {
                 "Marketing authorization for launching of medicinal products in Kosova": [4, 3],
@@ -693,91 +694,28 @@ var data = {
     }
 };
 
-window.suffix = {
-    "A02": {
-        "en": "days",
-        "sr": "days",
-        "sq": "ditë"
-    },
-    "A1": {
-        "en": "minutes",
-        "sr": "minutes",
-        "sq": "minuta"
-    },
-    "A2": {
-        "en": "persons",
-        "sr": "persons",
-        "sq": "persona"
-    },
-    "A3": {
-        "en": "minutes",
-        "sr": "minutes",
-        "sq": "minuta"
-    },
-    "A4": {
-        "en": "times",
-        "sr": "times",
-        "sq": "herë"
-    },
-    "A5_A": { "en": "", "sr": "", "sq": ""},
-    "A6": { "en": "", "sr": "", "sq": "" },
-    "B13": { "en": "", "sr": "", "sq": "" },
-    "P4": { "en": "€", "sq": "€", "sr": "€" },
-    "P5": { "en": "", "sq": "", "sr": "" },
-    "P6": { "en": "", "sq": "", "sr": "" }
-};
+suffix_choices = {
+    "A02": "days",
+    "A1": "minutes",
+    "A2": "persons",
+    "A3": "minutes",
+    "A4": "times",
+    "P4": "€"
+}
 
-var no_data_indicators = {
-    "Agency for Civil Registration": [],
-    "Agency for Business Registration": ["A02", "P4", "P5", "P6"],
-    "Agency for Medicine and Medical Equipment": ["A02", "P4", "P5", "P6"],
-    "Kosovo Customs": ["A02", "P4", "P5", "P6"],
-    "Department of Higher Education": [],
-    "Department of Non-Governmental Organizations - DONGOs": ["A02", "A1", "A2", "P4", "P5", "P6"],
-    "Departament of plant production and protection (DPPP)": ["A02", "A1", "A2", "P4", "P5", "P6"],
-    "Department for regulation of petroleum market": ["A02", "P4", "P5", "P6"]
-
-};
+window.suffix = "";
 
 $(function () {
-    drawAsterChart(data["A02"]["answer"]["Agency for Civil Registration"], suffix["A02"][window.language]);
-    var selected_question_text = $( "#question-select option:selected" ).text();
+    var indicator = $("#indicator-select").val();
+    window.suffix = suffix_choices[indicator];
+    drawSequencesChart(data[indicator]);
+    var selected_question_text = $("#indicator-select option:selected").text();
     $(".question-label").empty().text(selected_question_text);
-
-    $("#agency-select").change(function () {
-        var selected_agency = $("#agency-select").val();
-        $("#question-select option").show();
-        $("#question-select option").addClass("visible");
-        $("#question-select option").removeClass("hidden");
-        for (var i = 0; i < no_data_indicators[selected_agency].length; i++) {
-            var item = no_data_indicators[selected_agency][i];
-            $("#question-select > option[value$='" + item + "']").hide();
-            $("#question-select > option[value$='" + item + "']").addClass("hidden");
-        }
-
-        var selected_question_text = $( "#question-select option:selected" ).text();
+    $("#indicator-select").on("change", function () {
+        var selected_question_text = $("#indicator-select option:selected").text();
         $(".question-label").empty().text(selected_question_text);
-        var selected_question = $("#question-select option[class$='visible']")[0].value;
-        $("#question-select").val(selected_question);
-        displayChart(data[selected_question]["answer"][selected_agency], window.suffix[selected_question][window.language]);
-    });
-
-    $("#question-select").change(function () {
-        var selected_agency = $("#agency-select").val();
-        var selected_question = $("#question-select").val();
-        var selected_question_text = $( "#question-select option:selected" ).text();
-        $(".question-label").empty().text(selected_question_text);
-        displayChart(data[selected_question]["answer"][selected_agency], window.suffix[selected_question][window.language]);
+        var selected_indicator = $(this).val();
+        window.suffix = suffix_choices[selected_indicator];
+        drawSequencesChart(data[selected_indicator]);
     })
 });
-
-function displayChart(data, suffix) {
-    if (data != undefined) {
-        drawAsterChart(data, suffix);
-        $(".no-data-div").hide();
-        $(".aster-chart-container").show();
-    } else {
-        $(".no-data-div").show();
-        $(".aster-chart-container").hide();
-    }
-}

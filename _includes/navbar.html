@@ -12,9 +12,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 {% if page.language == "albanian" %}
-                    <li class="active"><a href="../sq/index.html">Visualizuesi</a></li>
+                    <li class="active"><a href="../sq/index.html">Aggregated</a></li>
+                    <li><a href="../sq/sunburst.html">Disaggregated</a></li>
+                {% elsif page.language == "serbian" %}
+                    <li class="active"><a href="../sr/index.html">Aggregated</a></li>
+                    <li><a href="../sr/sunburst.html">Disaggregated</a></li>
                 {% else %}
-                    <li class="active"><a href="../en/index.html">Visualizer</a></li>
+                    <li class="active"><a href="../en/index.html">Aggregated</a></li>
+                    <li><a href="../en/sunburst.html">Disaggregated</a></li>
                 {% endif %}
                 <!-- <li><a href="indicators.html">Indikatori</a></li>
                 <li><a href="problems.html">Problemi</a></li> -->
@@ -22,12 +27,16 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if page.language == "albanian" %}
                     <li class="active"><a href="../sq/index.html">Shqip</a></li>
-                    <li><a href="../en/sunburst.html">Sunburnt</a></li>
                     <li><a href="../en/index.html">English</a></li>
+                    <li><a href="../sr/index.html">Srpski</a></li>
+                {% elsif page.language == "serbian" %}
+                    <li><a href="../sq/index.html">Shqip</a></li>
+                    <li><a href="../en/index.html">English</a></li>
+                    <li class="active"><a href="../sr/index.html">Srpski</a></li>
                 {% else %}
                     <li><a href="../sq/index.html">Shqip</a></li>
-                    <li><a href="../en/sunburst.html">Sunburnt</a></li>
                     <li class="active"><a href="../en/index.html">English</a></li>
+                    <li><a href="../sr/index.html">Srpski</a></li>
                 {% endif %}
             </ul>
         </div> <!-- navbar-collapse -->
