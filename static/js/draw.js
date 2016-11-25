@@ -54,12 +54,14 @@ function drawAsterChart(chart_data, suffix) {
 
     if (window.screen.width < 480) {
         width = 350;
-        height = 280;
+        height = 320;
     }
 
     var radius = Math.min(width, height) / 2,
         innerRadius = 0.355 * radius;
-
+    if (window.screen.width < 480) {
+        innerRadius += 10;
+    }
     var pie = d3.layout.pie()
         .sort(null)
         .value(function (d) {
@@ -129,13 +131,15 @@ function drawAsterChart(chart_data, suffix) {
         }, 0);
 
     var fulltext = $("#agency-select option:selected").text();
-    if (window.screen.width > 480) {
-        addDescriptionToAsterChart(fulltext, svg);
-    }
+    addDescriptionToAsterChart(fulltext, svg);
 }
 
 // Adds description in the middle of the aster chart and regulates the size of text.
 function addDescriptionToAsterChart(fulltext, svg) {
+    var font_size = "13px";
+    if (window.screen.width < 480){
+        font_size = "11px";
+    }
     var json_position = {
         0: -38,
         1: -18,
@@ -173,7 +177,7 @@ function addDescriptionToAsterChart(fulltext, svg) {
         if (entry.match(r)) {
             var text =
             svg.append("svg:text")
-                .style("font-size", "13px")
+                .style("font-size", font_size)
                 .attr("class", "aster-score")
                 .attr("dy", json_position[index])
                 .attr("text-anchor", "middle")
@@ -181,7 +185,7 @@ function addDescriptionToAsterChart(fulltext, svg) {
                 .text(entry);
         } else {
             svg.append("svg:text")
-                .style("font-size", "13px")
+                .style("font-size", font_size)
                 .attr("class", "aster-score")
                 .attr("dy", json_position[index])
                 .attr("text-anchor", "middle")

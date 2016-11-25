@@ -53,3 +53,51 @@ body {
 #percentage {
     font-size: 15px;
 }
+
+@media (max-width: 768px) {
+    #indicator-select {
+        width: 95%;
+    }
+    #sequence {
+        display: none !important;
+    }
+
+    #percentage {
+        font-size: 10px !important;
+    }
+
+    #explanation {
+        position: absolute;
+        top: 140px;
+        font-size: 11px !important;
+        width: 130px;
+        text-align: center;
+        color: #666;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 321px) {
+    #explanation {
+        left: 29.5%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 361px) {
+    #explanation {
+        left: 32.5%;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+    #explanation {
+        left: 36.3%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    #explanation {
+        left: 40%;
+    }
+}
+

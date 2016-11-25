@@ -4,10 +4,15 @@
 // Dimensions of sunburst.
 var width = 950;
 var height = 500;
-var radius = Math.min(width, height) / 2;
 window.total_size = 0;
 // Mapping of step names to colors.
 var colors = {};
+var screen_width = window.screen.width;
+if (screen_width < 768) {
+    width = 320;
+    height = 350;
+}
+var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
@@ -142,7 +147,7 @@ function mouseover(d) {
     var percentage = (d.value);
     var depth = d.depth;
     var percentageString = d.name + "<br/>";
-    if (window.suffix == undefined){
+    if (window.suffix == undefined) {
         window.suffix = "";
     }
     var percentage_string = "<b>" + percentage + " " + window.suffix + "</b>";
