@@ -22,6 +22,12 @@ var b = {
     t: 10
 };
 
+var survey_name_translation = {
+    "en": " Survey ",
+    "sq": " Anketa ",
+    "sr": " Anketa ",
+};
+
 function drawSequencesChart(data) {
     $("svg").remove();
 
@@ -77,16 +83,16 @@ function buildJsonObject(data, vis, partition, arc) {
         var agency_name = agency;
         colors[agency_name] = colours[idx + 15];
         idx += 1;
-        colors[" Survey 1"] = "#0066cc";
-        colors[" Survey 2"] = "#c3834c";
+        colors[survey_name_translation[window.language] + "1"] = "#0066cc";
+        colors[survey_name_translation[window.language] + "2"] = "#c3834c";
         for (var service in data["answer"][agency]) {
             var service_values = data["answer"][agency][service];
             colors[service] = colours[idx];
             idx += 1;
             service = service.replace(/-/g, "").trim();
             agency_name = agency_name.replace(/-/g, "").trim();
-            sequences.push([agency_name + "-" + service + "-" + " Survey 1", service_values[0]]);
-            sequences.push([agency_name + "-" + service + "-" + " Survey 2", service_values[1]]);
+            sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "1", service_values[0]]);
+            sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "2", service_values[1]]);
         }
     }
 
