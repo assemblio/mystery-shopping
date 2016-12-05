@@ -1,3 +1,25 @@
+<script>
+    var languages = {
+        "1": "sq",
+        "2": "en",
+        "3": "sr"
+    };
+
+    $(function () {
+        $('.navbar-right li').on("click", function (e) {
+            var active_distribution_type = $(".left-nav li.active").find("a").text();
+            if (active_distribution_type == "Aggregated"){
+                e.preventDefault();
+                var lang = $(this).val();
+                var language = languages[lang.toString()];
+                console.log(lang);
+                window.location.href = "../" + language + "/sunburst.html";
+            }
+//            console.log(active_distribution_type);
+        })
+    });
+</script>
+
 <div class="row">
     <nav class="navbar navbar-inverse">
         <div class="navbar-header">
@@ -26,17 +48,17 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if page.language == "albanian" %}
-                    <li class="active"><a href="../sq/index.html">Shqip</a></li>
-                    <li><a href="../en/index.html">English</a></li>
-                    <li><a href="../sr/index.html">Srpski</a></li>
+                    <li value="1" class="active"><a href="../sq/index.html">Shqip</a></li>
+                    <li value="2"><a href="../en/index.html">English</a></li>
+                    <li value="3"><a href="../sr/index.html">Srpski</a></li>
                 {% elsif page.language == "serbian" %}
-                    <li><a href="../sq/index.html">Shqip</a></li>
-                    <li><a href="../en/index.html">English</a></li>
-                    <li class="active"><a href="../sr/index.html">Srpski</a></li>
+                    <li value="1"><a href="../sq/index.html">Shqip</a></li>
+                    <li value="2"><a href="../en/index.html">English</a></li>
+                    <li value="3" class="active"><a href="../sr/index.html">Srpski</a></li>
                 {% else %}
-                    <li><a href="../sq/index.html">Shqip</a></li>
-                    <li class="active"><a href="../en/index.html">English</a></li>
-                    <li><a href="../sr/index.html">Srpski</a></li>
+                    <li value="1"><a href="../sq/index.html">Shqip</a></li>
+                    <li value="2" class="active"><a href="../en/index.html">English</a></li>
+                    <li value="3"><a href="../sr/index.html">Srpski</a></li>
                 {% endif %}
             </ul>
         </div> <!-- navbar-collapse -->
