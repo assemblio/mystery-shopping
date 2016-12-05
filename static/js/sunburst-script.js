@@ -1311,12 +1311,37 @@ var data = {
 };
 
 suffix_choices = {
-    "A02": "days",
-    "A1": "minutes",
-    "A2": "persons",
-    "A3": "minutes",
-    "A4": "times",
-    "P4": "€"
+    "A02": {
+        "en": "days",
+        "sr": "days",
+        "sq": "ditë"
+    },
+    "A1": {
+        "en": "minutes",
+        "sr": "minutes",
+        "sq": "minuta"
+    },
+    "A2": {
+        "en": "persons",
+        "sr": "persons",
+        "sq": "persona"
+    },
+    "A3": {
+        "en": "minutes",
+        "sr": "minutes",
+        "sq": "minuta"
+    },
+    "A4": {
+        "en": "times",
+        "sr": "times",
+        "sq": "herë"
+    },
+    "A5_A": {"en": "", "sr": "", "sq": ""},
+    "A6": {"en": "", "sr": "", "sq": ""},
+    "B13": {"en": "", "sr": "", "sq": ""},
+    "P4": {"en": "€", "sq": "€", "sr": "€"},
+    "P5": {"en": "", "sq": "", "sr": ""},
+    "P6": {"en": "", "sq": "", "sr": ""}
 };
 
 window.suffix = "";
@@ -1324,7 +1349,7 @@ window.suffix = "";
 $(function () {
     // draw sequences sunburst chart on page load.
     var indicator = $("#indicator-select").val();
-    window.suffix = suffix_choices[indicator];
+    window.suffix = suffix_choices[indicator][window.language];
     drawSequencesChart(data[window.language][indicator]);
     var selected_question_text = $("#indicator-select option:selected").text();
     $(".question-label").empty().text(selected_question_text);
@@ -1338,7 +1363,7 @@ $(function () {
         var selected_question_text = $("#indicator-select option:selected").text();
         $(".question-label").empty().text(selected_question_text);
         var selected_indicator = $(this).val();
-        window.suffix = suffix_choices[selected_indicator];
+        window.suffix = suffix_choices[selected_indicator][window.language];
         drawSequencesChart(data[window.language][selected_indicator]);
     })
 });
