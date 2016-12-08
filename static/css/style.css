@@ -114,3 +114,20 @@ body {
 .select {
     height: 40px;
 }
+
+@media (max-width: 768px){
+    #question-select, #agency-select, #indicator-select, .select {
+        margin: 0 auto !important;
+        width: 90% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-inline .form-group {
+        margin-bottom: -17px !important;
+    }
+
+    .select {
+        width: 400px !important;
+    }
+}

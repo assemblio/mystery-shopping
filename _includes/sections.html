@@ -2,14 +2,18 @@
     <form class="form-inline service-form">
         {% if page.language == "english" %}
         <label for="agency-select">Agency: </label>
+        {% elsif page.language == "serbian" %}
+        <label for="agency-select">Agencija: </label>
         {% else %}
         <label for="agency-select">Agjensioni: </label>
         {% endif %}
         <div class="form-group">
             {% if page.language == "albanian" %}
-            <select id="agency-select" class="form-control select" style="margin-right: 20px;">
+            <select id="agency-select" class="form-control select" style="margin-right: 17px;">
+            {% elsif page.language == "english" %}
+            <select id="agency-select" class="form-control select" style="margin-right: -25px;">
             {% else %}
-            <select id="agency-select" class="form-control select">
+            <select id="agency-select" class="form-control select" style="margin-right: -14px;">
             {% endif %}
                 {% if page.language == "english" %}
                 <option value="Agency for Civil Registration">Agency for Civil Registration</option>
@@ -24,18 +28,27 @@
                 </option>
                 <option value="Department for regulation of petroleum market">Department for regulation of petroleum market
                 </option>
+                {% elsif page.language == "serbian" %}
+                <option value="Agencija za civilnu registraciju">Agencija za civilnu registraciju</option>
+                <option value="Agencija za registraciju biznisa">Agencija za registraciju biznisa</option>
+                <option value="Agencija za lekove i medicinsku opremu ">Agencija za lekove i medicinsku opremu</option>
+                <option value="Carina Kosova">Carina Kosova</option>
+                <option value="Odeljenje za visoko obrazovanje ">Odeljenje za visoko obrazovanje</option>
+                <option value="Odeljenje za nevladine organizacije - ONVO">Odeljenje za nevladine organizacije - ONVO</option>
+                <option value="Odeljenje za proizvodnju i zaštitu bilja ">Odeljenje za proizvodnju i zaštitu bilja</option>
+                <option value="Odeljenje za regulisanje naftnog tržišta">Odeljenje za regulisanje naftnog tržišta</option>
                 {% else %}
-                <option value="Agency for Civil Registration">Agjencia e Regjistrimit Civil</option>
-                <option value="Agency for Business Registration">Agjencia e Regjistrimit të Bizneseve</option>
-                <option value="Agency for Medicine and Medical Equipment">Agjensioni për Produkte dhe Pajisje Mjekësore
+                <option value="Agjencia per regjistrim civil">Agjencia e Regjistrimit Civil</option>
+                <option value="Agjencia per Regjistrimin e Bizneseve">Agjencia e Regjistrimit të Bizneseve</option>
+                <option value="Agjencioni per produkte dhe pajisje mjekesore (AKPM)">Agjensioni për Produkte dhe Pajisje Mjekësore
                 </option>
-                <option value="Kosovo Customs">Dogana e Kosovës</option>
-                <option value="Department of Higher Education">Departamenti për arsim të lartë</option>
-                <option value="Department of Non-Governmental Organizations - DONGOs">Departamenti për Organizata Jo-Qeveritare
+                <option value="Dogana e Kosovës">Dogana e Kosovës</option>
+                <option value="Departamenti i Arsimit të Lartë">Departamenti për arsim të lartë</option>
+                <option value="Departamenti I Organizatave Jo Qeveritare - DOJQ">Departamenti për Organizata Jo-Qeveritare
                 </option>
-                <option value="Departament of plant production and protection (DPPP)">Departamenti i Prodhimtarisë dhe Mbrojtjes së Bimëve
+                <option value="Departamenti i Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)">Departamenti i Prodhimtarisë dhe Mbrojtjes së Bimëve
                 </option>
-                <option value="Department for regulation of petroleum market">Departamenti për Rregullimin e Tregut të Naftës
+                <option value="Departamenti per rregullimin e tregut te naftes">Departamenti për Rregullimin e Tregut të Naftës
                 </option>
                 {% endif %}
             </select><br><br/></select>
@@ -46,6 +59,8 @@
     <form class="form-inline question-form">
         {% if page.language == "english" %}
         <label for="question-select">Indicator: </label>
+        {% elsif page.language == "serbian" %}
+        <label for="question-select">Indikatori: </label>
         {% else %}
         <label for="question-select">Treguesi: </label>
         {% endif %}
@@ -70,6 +85,30 @@
                 <option value="P5">How easy was for you to pay for this service/document</option>
                 <option value="P6">Please rank your level of satisfaction about the amount of payment for the
                     service/document.
+                </option>
+                {% elsif page.language == "albanian" %}
+                <option value="A02">Para sa ditësh e keni bërë aplikimin?</option>
+                <option value="A1">Sa kohë pritët në radhë:</option>
+                <option value="A2">Sa persona ishin në radhë para jush?</option>
+                <option value="A3">Sa kohë zgjati ndërveprimi juaj me punonjësin e institucionit?</option>
+                <option value="A4">Sa herë iu desh të vizitonit këtë institucion për të marrë këtë
+                    shërbim/informacionin/dokumentin?
+                </option>
+                <option value="A5_A">Si do të vlerësonit në një shkallë nga 1 në 5 lehtësinë për të gjetur zyrën e cila
+                    ju duhej për të marr është shërbimin që kërkonit ku 1=Shumë e vështirë dhe 5=Shumë e lehtë:
+                </option>
+                <option value="A6">Si do te vlerësonit në një shkallë nga 1 në 5 kohën qe iu është dashur për të marrë
+                    këtë shërbim/informacionin/dokumentin, ku 1=Shumë e ngadaltë dhe 5=Shumë shpejtë:
+                </option>
+                <option value="B13">Pas përfundimit të veprimit si do të vlerësonit shpejtësinë e ndërveprimit në një
+                    shkallë nga 1 në5 ku 1=Shumë e ngadaltë dhe 5=Shumë e shpejtë
+                </option>
+                <option value="P4">Sa u pagua realisht për shërbimin/dokumentin?</option>
+                <option value="P5">Lidhur me lehtësinë e kryerjes së pagesës për këtë shërbim/dokument, sa e lehtë
+                    ishte?
+                </option>
+                <option value="P6">Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument?Vlerëso me një
+                    shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur
                 </option>
                 {% else %}
                 <option value="A02">Para sa ditësh e keni bërë aplikimin?</option>

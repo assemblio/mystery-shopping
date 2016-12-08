@@ -17,7 +17,7 @@ body {
     font-size: 12px;
 }
 
-#indicator-select {
+#indicator-select, #question-select {
     width: 400px;
     height: 40px;
 }
@@ -55,9 +55,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    #indicator-select {
-        width: 95%;
-    }
     #sequence {
         display: none !important;
     }
