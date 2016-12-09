@@ -7,15 +7,13 @@
 
     $(function () {
         $('.navbar-right li').on("click", function (e) {
-            var active_distribution_type = $(".left-nav li.active").find("a").text();
+            var active_distribution_type = $(".left-nav li.active").find("a").attr("name");
             if (active_distribution_type == "Aggregated"){
                 e.preventDefault();
                 var lang = $(this).val();
                 var language = languages[lang.toString()];
-                console.log(lang);
                 window.location.href = "../" + language + "/sunburst.html";
             }
-//            console.log(active_distribution_type);
         })
     });
 </script>
@@ -34,14 +32,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav left-nav">
                 {% if page.language == "albanian" %}
-                    <li class="active"><a href="../sq/index.html">Të ndara</a></li>
-                    <li><a href="../sq/sunburst.html">Të grumbulluara</a></li>
+                    <li class="active"><a name="Disaggregated" href="../sq/index.html">Të ndara</a></li>
+                    <li><a name="Aggregated" href="../sq/sunburst.html">Të grumbulluara</a></li>
                 {% elsif page.language == "serbian" %}
-                    <li class="active"><a href="../sr/index.html">Razvrstano</a></li>
-                    <li><a href="../sr/sunburst.html">Ukupno</a></li>
+                    <li class="active"><a name="Disaggregated" href="../sr/index.html">Razvrstano</a></li>
+                    <li><a name="Aggregated" href="../sr/sunburst.html">Ukupno</a></li>
                 {% else %}
-                    <li class="active"><a href="../en/index.html">Disaggregated</a></li>
-                    <li><a href="../en/sunburst.html">Aggregated</a></li>
+                    <li class="active"><a name="Disaggregated" href="../en/index.html">Disaggregated</a></li>
+                    <li><a name="Aggregated" href="../en/sunburst.html">Aggregated</a></li>
                 {% endif %}
                 <!-- <li><a href="indicators.html">Indikatori</a></li>
                 <li><a href="problems.html">Problemi</a></li> -->
