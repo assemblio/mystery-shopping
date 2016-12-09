@@ -2,6 +2,8 @@
     <div class="indicator-container">
         {% if page.language == "english" %}
         <label for="indicator-select">Indicator: </label>
+        {% elsif page.language == "serbian" %}
+        <label for="indicator-select">Indikatori: </label>
         {% else %}
         <label for="indicator-select">Treguesi: </label>
         {% endif %}
@@ -33,40 +35,45 @@
             <option value="A02">Para sa ditësh e keni bërë aplikimin?</option>
             <option value="A1">Sa kohë pritët në radhë:</option>
             <option value="A2">Sa persona ishin në radhë para jush?</option>
-            <option value="A4">Sa herë iu desh të vizitonit këtë institucion për të marrë këtë shërbim/informacionin/dokumentin?
+            <option value="A4">Sa herë iu desh të vizitonit këtë institucion për të marrë këtë
+                shërbim/informacionin/dokumentin?
             </option>
-            <option value="A5_A">Si do të vlerësonit në një shkallë nga 1 në 5 lehtësinë për të gjetur zyrën e cila ju duhej për të marr është shërbimin që kërkonit ku 1=Shumë e vështirë dhe 5=Shumë e lehtë:
+            <option value="A5_A">Si do të vlerësonit në një shkallë nga 1 në 5 lehtësinë për të gjetur zyrën e cila ju
+                duhej për të marr është shërbimin që kërkonit ku 1=Shumë e vështirë dhe 5=Shumë e lehtë:
             </option>
-            <option value="A6">Si do te vlerësonit në një shkallë nga 1 në 5 kohën qe iu është dashur për të marrë këtë shërbim/informacionin/dokumentin, ku 1=Shumë e ngadaltë dhe 5=Shumë shpejtë:
+            <option value="A6">Si do te vlerësonit në një shkallë nga 1 në 5 kohën qe iu është dashur për të marrë këtë
+                shërbim/informacionin/dokumentin, ku 1=Shumë e ngadaltë dhe 5=Shumë shpejtë:
             </option>
-            <option value="B13">Pas përfundimit të veprimit si do të vlerësonit shpejtësinë e ndërveprimit në një shkallë nga 1 në5 ku 1=Shumë e ngadaltë dhe 5=Shumë e shpejtë
+            <option value="B13">Pas përfundimit të veprimit si do të vlerësonit shpejtësinë e ndërveprimit në një
+                shkallë nga 1 në5 ku 1=Shumë e ngadaltë dhe 5=Shumë e shpejtë
             </option>
             <option value="P4">Sa u pagua realisht për shërbimin/dokumentin?</option>
             <option value="P5">Lidhur me lehtësinë e kryerjes së pagesës për këtë shërbim/dokument, sa e lehtë ishte?
             </option>
-            <option value="P6">Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument?Vlerëso me një shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur
+            <option value="P6">Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument?Vlerëso me një
+                shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur
             </option>
 
             {% else %}
 
-            <option value="A3">What's the interaction duration time?</option>
-            <option value="A02">How many days before did you make the application?</option>
-            <option value="A1">How long did you wait in the queue?</option>
-            <option value="A2">How many customers/people were before you in the queue?</option>
-            <option value="A4">How many times did you visit the office to receive the service/document?</option>
-            <option value="A5_A">How do you evaluate the accessibility of the office? Use a 1-5 scale, where 1=very hard
-                and 5=very easy.
+            <option value="A3">Koje je vreme trajanja interakcije?</option>
+            <option value="A02">Pre koliko dana ste podneli zahtev/aplikaciju?</option>
+            <option value="A1">Koliko dugo ste čekali u redu?</option>
+            <option value="A2">Koliko je klijenata/ljudi čekalo pre vas u redu?</option>
+            <option value="A4">Koliko puta ste vi posetili kancelariju pre nego što ste dobili uslugu/dokument?</option>
+            <option value="A5_A">Kako ocenjujete pristup kancelariji? Koristite skalu od 1-5, gde je 1=vrlo težak a 5=
+                vrlo lak.
             </option>
-            <option value="A6">Using a 1 – 5 scale (where 1=very slow and 5=very fast), how do you evaluate the time
-                required to receive the service/ information/ document?
+            <option value="A6">Upotrebom skale od 1 – 5 (gde je 1= vrlo sporo dok je 5= vrlo brzo), kako ocenjujete
+                potrebno vreme za primanje usluge / informacije/ dokumenta?
             </option>
-            <option value="B13">After your interaction, how do you evaluate the speed of interaction (use a 1-5 scale,
-                where 1=very slow and 5=very fast)
+            <option value="B13">Posle vase interakcije/razgovora, kako ocenjujete brzinu interakcije (upotrebom skale od
+                1-5, gde je 1=vvrlo sporo dok je 5=vrlo brzo)
             </option>
-            <option value="P4">What was the actual payment for the service/document?</option>
-            <option value="P5">How easy was for you to pay for this service/document</option>
-            <option value="P6">Please rank your level of satisfaction about the amount of payment for the
-                service/document.
+            <option value="P4">Koliko ste platili za tu uslugu/dokument?</option>
+            <option value="P5">Koliko je lako za vas bilo plaćanje te usluge/dokumenta</option>
+            <option value="P6">Molimo Vas odredite nivo vašeg zadovoljstva koliko ste zadovoljni sumom koja vam je
+                naplaćena za tu uslugu /dokument.
             </option>
             {% endif %}
         </select>

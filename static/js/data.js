@@ -1924,27 +1924,27 @@ var data = {
 var suffix_choices = {
     "A02": {
         "en": "days",
-        "sr": "days",
+        "sr": "dani",
         "sq": "ditë"
     },
     "A1": {
         "en": "minutes",
-        "sr": "minutes",
+        "sr": "minuta",
         "sq": "minuta"
     },
     "A2": {
         "en": "persons",
-        "sr": "persons",
+        "sr": "lica",
         "sq": "persona"
     },
     "A3": {
         "en": "minutes",
-        "sr": "minutes",
+        "sr": "minuta",
         "sq": "minuta"
     },
     "A4": {
         "en": "times",
-        "sr": "times",
+        "sr": "puta",
         "sq": "herë"
     },
     "A5_A": {"en": "", "sr": "", "sq": ""},

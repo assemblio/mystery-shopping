@@ -10,48 +10,64 @@
         <div class="form-group">
             {% if page.language == "albanian" %}
             <select id="agency-select" class="form-control select" style="margin-right: 17px;">
-            {% elsif page.language == "english" %}
-            <select id="agency-select" class="form-control select" style="margin-right: -25px;">
-            {% else %}
-            <select id="agency-select" class="form-control select" style="margin-right: -14px;">
-            {% endif %}
-                {% if page.language == "english" %}
-                <option value="Agency for Civil Registration">Agency for Civil Registration</option>
-                <option value="Agency for Business Registration">Agency for Business Registration</option>
-                <option value="Agency for Medicine and Medical Equipment">Agency for Medicine and Medical Equipment
-                </option>
-                <option value="Kosovo Customs">Kosovo Customs</option>
-                <option value="Department of Higher Education">Department of Higher Education</option>
-                <option value="Department of Non-Governmental Organizations - DONGOs">Department of Non-Governmental Organizations - DONGOs
-                </option>
-                <option value="Departament of plant production and protection (DPPP)">Departament of plant production and protection (DPPP)
-                </option>
-                <option value="Department for regulation of petroleum market">Department for regulation of petroleum market
-                </option>
-                {% elsif page.language == "serbian" %}
-                <option value="Agencija za civilnu registraciju">Agencija za civilnu registraciju</option>
-                <option value="Agencija za registraciju biznisa">Agencija za registraciju biznisa</option>
-                <option value="Agencija za lekove i medicinsku opremu ">Agencija za lekove i medicinsku opremu</option>
-                <option value="Carina Kosova">Carina Kosova</option>
-                <option value="Odeljenje za visoko obrazovanje ">Odeljenje za visoko obrazovanje</option>
-                <option value="Odeljenje za nevladine organizacije - ONVO">Odeljenje za nevladine organizacije - ONVO</option>
-                <option value="Odeljenje za proizvodnju i zaštitu bilja ">Odeljenje za proizvodnju i zaštitu bilja</option>
-                <option value="Odeljenje za regulisanje naftnog tržišta">Odeljenje za regulisanje naftnog tržišta</option>
-                {% else %}
-                <option value="Agjencia per regjistrim civil">Agjencia e Regjistrimit Civil</option>
-                <option value="Agjencia per Regjistrimin e Bizneseve">Agjencia e Regjistrimit të Bizneseve</option>
-                <option value="Agjencioni per produkte dhe pajisje mjekesore (AKPM)">Agjensioni për Produkte dhe Pajisje Mjekësore
-                </option>
-                <option value="Dogana e Kosovës">Dogana e Kosovës</option>
-                <option value="Departamenti i Arsimit të Lartë">Departamenti për arsim të lartë</option>
-                <option value="Departamenti I Organizatave Jo Qeveritare - DOJQ">Departamenti për Organizata Jo-Qeveritare
-                </option>
-                <option value="Departamenti i Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)">Departamenti i Prodhimtarisë dhe Mbrojtjes së Bimëve
-                </option>
-                <option value="Departamenti per rregullimin e tregut te naftes">Departamenti për Rregullimin e Tregut të Naftës
-                </option>
-                {% endif %}
-            </select><br><br/></select>
+                {% elsif page.language == "english" %}
+                <select id="agency-select" class="form-control select" style="margin-right: -25px;">
+                    {% else %}
+                    <select id="agency-select" class="form-control select" style="margin-right: -14px;">
+                        {% endif %}
+                        {% if page.language == "english" %}
+                        <option value="Agency for Civil Registration">Agency for Civil Registration</option>
+                        <option value="Agency for Business Registration">Agency for Business Registration</option>
+                        <option value="Agency for Medicine and Medical Equipment">Agency for Medicine and Medical
+                            Equipment
+                        </option>
+                        <option value="Kosovo Customs">Kosovo Customs</option>
+                        <option value="Department of Higher Education">Department of Higher Education</option>
+                        <option value="Department of Non-Governmental Organizations - DONGOs">Department of
+                            Non-Governmental Organizations - DONGOs
+                        </option>
+                        <option value="Departament of plant production and protection (DPPP)">Departament of plant
+                            production and protection (DPPP)
+                        </option>
+                        <option value="Department for regulation of petroleum market">Department for regulation of
+                            petroleum market
+                        </option>
+                        {% elsif page.language == "serbian" %}
+                        <option value="Agencija za civilnu registraciju">Agencija za civilnu registraciju</option>
+                        <option value="Agencija za registraciju biznisa">Agencija za registraciju biznisa</option>
+                        <option value="Agencija za lekove i medicinsku opremu ">Agencija za lekove i medicinsku opremu
+                        </option>
+                        <option value="Carina Kosova">Carina Kosova</option>
+                        <option value="Odeljenje za visoko obrazovanje ">Odeljenje za visoko obrazovanje</option>
+                        <option value="Odeljenje za nevladine organizacije - ONVO">Odeljenje za nevladine organizacije -
+                            ONVO
+                        </option>
+                        <option value="Odeljenje za proizvodnju i zaštitu bilja ">Odeljenje za proizvodnju i zaštitu
+                            bilja
+                        </option>
+                        <option value="Odeljenje za regulisanje naftnog tržišta">Odeljenje za regulisanje naftnog
+                            tržišta
+                        </option>
+                        {% else %}
+                        <option value="Agjencia per regjistrim civil">Agjencia e Regjistrimit Civil</option>
+                        <option value="Agjencia per Regjistrimin e Bizneseve">Agjencia e Regjistrimit të Bizneseve
+                        </option>
+                        <option value="Agjencioni per produkte dhe pajisje mjekesore (AKPM)">Agjensioni për Produkte dhe
+                            Pajisje Mjekësore
+                        </option>
+                        <option value="Dogana e Kosovës">Dogana e Kosovës</option>
+                        <option value="Departamenti i Arsimit të Lartë">Departamenti për arsim të lartë</option>
+                        <option value="Departamenti I Organizatave Jo Qeveritare - DOJQ">Departamenti për Organizata
+                            Jo-Qeveritare
+                        </option>
+                        <option value="Departamenti i Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)">Departamenti i
+                            Prodhimtarisë dhe Mbrojtjes së Bimëve
+                        </option>
+                        <option value="Departamenti per rregullimin e tregut te naftes">Departamenti për Rregullimin e
+                            Tregut të Naftës
+                        </option>
+                        {% endif %}
+                    </select><br><br/></select>
         </div>
     </form>
 </div>
@@ -111,28 +127,28 @@
                     shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur
                 </option>
                 {% else %}
-                <option value="A02">Para sa ditësh e keni bërë aplikimin?</option>
-                <option value="A1">Sa kohë pritët në radhë:</option>
-                <option value="A2">Sa persona ishin në radhë para jush?</option>
-                <option value="A3">Sa kohë zgjati ndërveprimi juaj me punonjësin e institucionit?</option>
-                <option value="A4">Sa herë iu desh të vizitonit këtë institucion për të marrë këtë
-                    shërbim/informacionin/dokumentin?
+
+                <option value="A3">Koje je vreme trajanja interakcije?</option>
+                <option value="A02">Pre koliko dana ste podneli zahtev/aplikaciju?</option>
+                <option value="A1">Koliko dugo ste čekali u redu?</option>
+                <option value="A2">Koliko je klijenata/ljudi čekalo pre vas u redu?</option>
+                <option value="A4">Koliko puta ste vi posetili kancelariju pre nego što ste dobili uslugu/dokument?
                 </option>
-                <option value="A5_A">Si do të vlerësonit në një shkallë nga 1 në 5 lehtësinë për të gjetur zyrën e cila
-                    ju duhej për të marr është shërbimin që kërkonit ku 1=Shumë e vështirë dhe 5=Shumë e lehtë:
+                <option value="A5_A">Kako ocenjujete pristup kancelariji? Koristite skalu od 1-5, gde je 1=vrlo težak a
+                    5=
+                    vrlo lak.
                 </option>
-                <option value="A6">Si do te vlerësonit në një shkallë nga 1 në 5 kohën qe iu është dashur për të marrë
-                    këtë shërbim/informacionin/dokumentin, ku 1=Shumë e ngadaltë dhe 5=Shumë shpejtë:
+                <option value="A6">Upotrebom skale od 1 – 5 (gde je 1= vrlo sporo dok je 5= vrlo brzo), kako ocenjujete
+                    potrebno vreme za primanje usluge / informacije/ dokumenta?
                 </option>
-                <option value="B13">Pas përfundimit të veprimit si do të vlerësonit shpejtësinë e ndërveprimit në një
-                    shkallë nga 1 në5 ku 1=Shumë e ngadaltë dhe 5=Shumë e shpejtë
+                <option value="B13">Posle vase interakcije/razgovora, kako ocenjujete brzinu interakcije (upotrebom
+                    skale od
+                    1-5, gde je 1=vvrlo sporo dok je 5=vrlo brzo)
                 </option>
-                <option value="P4">Sa u pagua realisht për shërbimin/dokumentin?</option>
-                <option value="P5">Lidhur me lehtësinë e kryerjes së pagesës për këtë shërbim/dokument, sa e lehtë
-                    ishte?
-                </option>
-                <option value="P6">Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument?Vlerëso me një
-                    shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur
+                <option value="P4">Koliko ste platili za tu uslugu/dokument?</option>
+                <option value="P5">Koliko je lako za vas bilo plaćanje te usluge/dokumenta</option>
+                <option value="P6">Molimo Vas odredite nivo vašeg zadovoljstva koliko ste zadovoljni sumom koja vam je
+                    naplaćena za tu uslugu /dokument.
                 </option>
                 {% endif %}
             </select><br><br/>
