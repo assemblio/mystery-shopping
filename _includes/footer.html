@@ -17,19 +17,25 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <br>
-                        <h4>Follow us</h4>
+                        {% if page.language == "albanian" %}
+                        <h4 class="follow-label">Na ndjekni</h4>
+                        {% elsif page.language == "english" %}
+                        <h4 class="follow-label">Follow us</h4>
+                        {% else %}
+                        <h4 class="follow-label">Pratite nas</h4>
+                        {% endif %}
                         <!-- Twitter -->
-                        <a href="#" data-toggle="tooltip" title="Twitter" target="_blank" class="share-btn twitter">
+                        <a href="https://twitter.com/map_rks" data-toggle="tooltip" title="Twitter" target="_blank" class="share-btn twitter">
                             <i class="fa fa-twitter"></i>
                         </a>
 
                         <!-- Facebook -->
-                        <a href="#" data-toggle="tooltip" title="Facebook" target="_blank" class="share-btn facebook">
+                        <a href="https://www.facebook.com/map.rks/" data-toggle="tooltip" title="Facebook" target="_blank" class="share-btn facebook">
                             <i class="fa fa-facebook"></i>
                         </a>
 
                         <!-- Page -->
-                        <a href="#" data-toggle="tooltip" title="UNDP Kosovo" target="_blank" class="share-btn home">
+                        <a href="#" data-toggle="tooltip" title="Mystery Shopping" target="_blank" class="share-btn home">
                             <i class="fa fa-home"></i>
                         </a>
                         <br><br>

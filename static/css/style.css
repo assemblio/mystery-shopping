@@ -115,6 +115,10 @@ body {
     height: 40px;
 }
 
+.follow-label {
+    margin-left: -10px !important;
+}
+
 @media (max-width: 768px){
     #question-select, #agency-select, #indicator-select, .select {
         margin: 0 auto !important;
