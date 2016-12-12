@@ -170,8 +170,6 @@ function select_wedge(d){
 
 // Adds description in the middle of the aster chart and regulates the size of text.
 function addDescriptionToAsterChart(fulltext, svg) {
-
-    console.log(fulltext);
     var font_size = "11px";
     if (window.screen.width < 480){
         font_size = "9px";
@@ -185,7 +183,6 @@ function addDescriptionToAsterChart(fulltext, svg) {
         5: 62
     };
     var a = "";
-    console.log(fulltext.length)
     if (fulltext.length > 11) {
         a = fulltext.match(/.{14}\S*|.*/g);
     } else if (fulltext.length == 8) {
@@ -210,7 +207,6 @@ function addDescriptionToAsterChart(fulltext, svg) {
     }
 
     var r = /\d+/;
-    console.log(a);
     // alert (s.match(r));
     a.forEach(function (entry) {
         if (entry.match(r)) {
