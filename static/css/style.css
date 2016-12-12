@@ -120,6 +120,20 @@ body {
         margin: 0 auto !important;
         width: 90% !important;
     }
+
+    .hr {
+        margin-top: -10px;
+    }
+
+    .question-label {
+        width: 95% !important;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .form-group {
+        margin-bottom: -20px;
+    }
 }
 
 @media (min-width: 768px) {

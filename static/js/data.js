@@ -725,7 +725,7 @@ var data = {
                 }
             },
             "question": {
-                "sq": "Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument?\nVlerëso me një shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur",
+                "sq": "Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument? Vlerëso me një shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur",
                 "en": "Please rank your level of satisfaction about the amount of payment for the service/document."
             }
         },
@@ -813,7 +813,7 @@ var data = {
                     "Njohja e diplomës të nivelit doktoratës": [4, 3],
                     "Njohja e diplomës së shkolllës së lartë profesionale dhe nivelit Bachelor/ studime themelore": [4, 4]
                 },
-                "Dogana e Kosoves": {
+                "Dogana e Kosovës": {
                     "Leshim I Licences per import dhe eksport dhe prodhim të produkteve Alkoolike": [5, 5],
                     "Leshim i Licences  per  import  dhe  eksport  të produkteve te duhanit": [5, 5],
                     "Leshim I Autorizimit per Depo te Mallrave Akcizor": [5, 5]
@@ -821,7 +821,7 @@ var data = {
                 "Departamenti per rregullimin e tregut te naftes": {
                     "Licencë për import të naftës dhe produkteve të naftës si lendë e parë për prodhim të produkteve të naftës.": [5, 5],
                     "Licencë për shitje me shumicë të kerozinës": [4, 5],
-                    "Licenca për import të vajrave nën produkti të caktuar.\n (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 5]
+                    "Licenca për import të vajrave nën produkti të caktuar.  (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 5]
                 },
                 "Departamenti Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)": {
                     "Certifikatë për autorizim të produktit për mbrojtjen e bimëve": [5, 5],
@@ -919,7 +919,7 @@ var data = {
                     "Njohja e diplomës të nivelit doktoratës": [3, 3],
                     "Njohja e diplomës së shkolllës së lartë profesionale dhe nivelit Bachelor/ studime themelore": [4, 4]
                 },
-                "Dogana e Kosoves": {
+                "Dogana e Kosovës": {
                     "Leshim I Licences per import dhe eksport dhe prodhim të produkteve Alkoolike": [4, 5],
                     "Leshim i Licences  per  import  dhe  eksport  të produkteve te duhanit": [5, 5],
                     "Leshim I Autorizimit per Depo te Mallrave Akcizor": [5, 5]
@@ -927,7 +927,7 @@ var data = {
                 "Departamenti per rregullimin e tregut te naftes": {
                     "Licencë për import të naftës dhe produkteve të naftës si lendë e parë për prodhim të produkteve të naftës.": [4, 5],
                     "Licencë për shitje me shumicë të kerozinës": [4, 5],
-                    "Licenca për import të vajrave nën produkti të caktuar.\n (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 5]
+                    "Licenca për import të vajrave nën produkti të caktuar.  (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 5]
                 },
                 "Departamenti Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)": {
                     "Certifikatë për autorizim të produktit për mbrojtjen e bimëve": [5, 5],
@@ -987,7 +987,7 @@ var data = {
                     "Njohja e diplomës të nivelit doktoratës": [0, 0],
                     "Njohja e diplomës së shkolllës së lartë profesionale dhe nivelit Bachelor/ studime themelore": [0, 0]
                 },
-                "Dogana e Kosoves": {
+                "Dogana e Kosovës": {
                     "Leshim I Licences per import dhe eksport dhe prodhim të produkteve Alkoolike": [0, 1],
                     "Leshim i Licences  per  import  dhe  eksport  të produkteve te duhanit": [0, 0],
                     "Leshim I Autorizimit per Depo te Mallrave Akcizor": [0, 0]
@@ -995,7 +995,7 @@ var data = {
                 "Departamenti per rregullimin e tregut te naftes": {
                     "Licencë për import të naftës dhe produkteve të naftës si lendë e parë për prodhim të produkteve të naftës.": [4, 0],
                     "Licencë për shitje me shumicë të kerozinës": [0, 0],
-                    "Licenca për import të vajrave nën produkti të caktuar.\n (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [1, 0]
+                    "Licenca për import të vajrave nën produkti të caktuar.  (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [1, 0]
                 },
                 "Departamenti Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)": {
                     "Certifikatë për autorizim të produktit për mbrojtjen e bimëve": [0, 0],
@@ -1051,7 +1051,7 @@ var data = {
                     "Njohja e diplomës të nivelit doktoratës": [7, 10],
                     "Njohja e diplomës së shkolllës së lartë profesionale dhe nivelit Bachelor/ studime themelore": [11, 8]
                 },
-                "Dogana e Kosoves": {
+                "Dogana e Kosovës": {
                     "Leshim I Licences per import dhe eksport dhe prodhim të produkteve Alkoolike": [10, 6],
                     "Leshim i Licences  per  import  dhe  eksport  të produkteve te duhanit": [13, 30],
                     "Leshim I Autorizimit per Depo te Mallrave Akcizor": [10, 15]
@@ -1059,7 +1059,7 @@ var data = {
                 "Departamenti per rregullimin e tregut te naftes": {
                     "Licencë për import të naftës dhe produkteve të naftës si lendë e parë për prodhim të produkteve të naftës.": [5, 15],
                     "Licencë për shitje me shumicë të kerozinës": [20, 10],
-                    "Licenca për import të vajrave nën produkti të caktuar.\n (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 7]
+                    "Licenca për import të vajrave nën produkti të caktuar.  (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 7]
                 },
                 "Departamenti Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)": {
                     "Certifikatë për autorizim të produktit për mbrojtjen e bimëve": [10, 7],
@@ -1119,7 +1119,7 @@ var data = {
                     "Njohja e diplomës të nivelit doktoratës": [0, 0],
                     "Njohja e diplomës së shkolllës së lartë profesionale dhe nivelit Bachelor/ studime themelore": [0, 0]
                 },
-                "Dogana e Kosoves": {
+                "Dogana e Kosovës": {
                     "Leshim I Licences per import dhe eksport dhe prodhim të produkteve Alkoolike": [0, 1],
                     "Leshim i Licences  per  import  dhe  eksport  të produkteve te duhanit": [0, 0],
                     "Leshim I Autorizimit per Depo te Mallrave Akcizor": [0, 0]
@@ -1127,7 +1127,7 @@ var data = {
                 "Departamenti per rregullimin e tregut te naftes": {
                     "Licencë për import të naftës dhe produkteve të naftës si lendë e parë për prodhim të produkteve të naftës.": [1, 0],
                     "Licencë për shitje me shumicë të kerozinës": [0, 0],
-                    "Licenca për import të vajrave nën produkti të caktuar.\n (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [1, 0]
+                    "Licenca për import të vajrave nën produkti të caktuar.  (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [1, 0]
                 },
                 "Departamenti Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)": {
                     "Certifikatë për autorizim të produktit për mbrojtjen e bimëve": [0, 0],
@@ -1187,7 +1187,7 @@ var data = {
                     "Njohja e diplomës të nivelit doktoratës": [1, 1],
                     "Njohja e diplomës së shkolllës së lartë profesionale dhe nivelit Bachelor/ studime themelore": [1, 1]
                 },
-                "Dogana e Kosoves": {
+                "Dogana e Kosovës": {
                     "Leshim I Licences per import dhe eksport dhe prodhim të produkteve Alkoolike": [1, 1],
                     "Leshim i Licences  per  import  dhe  eksport  të produkteve te duhanit": [1, 1],
                     "Leshim I Autorizimit per Depo te Mallrave Akcizor": [1, 1]
@@ -1195,7 +1195,7 @@ var data = {
                 "Departamenti per rregullimin e tregut te naftes": {
                     "Licencë për import të naftës dhe produkteve të naftës si lendë e parë për prodhim të produkteve të naftës.": [1, 1],
                     "Licencë për shitje me shumicë të kerozinës": [1, 1],
-                    "Licenca për import të vajrave nën produkti të caktuar.\n (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [1, 1]
+                    "Licenca për import të vajrave nën produkti të caktuar.  (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [1, 1]
                 },
                 "Departamenti Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)": {
                     "Certifikatë për autorizim të produktit për mbrojtjen e bimëve": [1, 1],
@@ -1255,7 +1255,7 @@ var data = {
                     "Njohja e diplomës të nivelit doktoratës": [3, 3],
                     "Njohja e diplomës së shkolllës së lartë profesionale dhe nivelit Bachelor/ studime themelore": [4, 3]
                 },
-                "Dogana e Kosoves": {
+                "Dogana e Kosovës": {
                     "Leshim I Licences per import dhe eksport dhe prodhim të produkteve Alkoolike": [3, 5],
                     "Leshim i Licences  per  import  dhe  eksport  të produkteve te duhanit": [5, 5],
                     "Leshim I Autorizimit per Depo te Mallrave Akcizor": [5, 5]
@@ -1263,7 +1263,7 @@ var data = {
                 "Departamenti per rregullimin e tregut te naftes": {
                     "Licencë për import të naftës dhe produkteve të naftës si lendë e parë për prodhim të produkteve të naftës.": [5, 5],
                     "Licencë për shitje me shumicë të kerozinës": [4, 5],
-                    "Licenca për import të vajrave nën produkti të caktuar.\n (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 5]
+                    "Licenca për import të vajrave nën produkti të caktuar.  (Automjete, lubrifikantë, hidraulike, monitorimi ngrohje, anti-korrozioni, izolimin elektrik, puna metal, etj, ose vajra bazë)": [5, 5]
                 },
                 "Departamenti Prodhimtarise dhe Mbrojtjes se Bimeve (DPMB)": {
                     "Certifikatë për autorizim të produktit për mbrojtjen e bimëve": [5, 5],
@@ -1338,7 +1338,7 @@ var data = {
                 }, "Odeljenje za visoko obrazovanje ": {"Priznavanje diplome sa Master nivoa ": [4]}
             },
             "question": {
-                "sq": "Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument?\nVlerëso me një shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur",
+                "sq": "Sa jeni të kënaqur me tarifën që keni paguar për këtë shërbim/dokument? Vlerëso me një shkallë nga 1-5, ku 1 – Aspak i/e kënaqur dhe 5- Shumë i/e kënaqur",
                 "en": "Please rank your level of satisfaction about the amount of payment for the service/document."
             }
         },

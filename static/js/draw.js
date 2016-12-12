@@ -1,4 +1,5 @@
 var values = [];
+var select_color = "#FFDE3A";
 function buildChartData(data) {
     values = [];
     var items_count = Object.keys(data).length;
@@ -46,11 +47,12 @@ function drawAsterChart(chart_data, suffix) {
         d.weight = +d.weight;
         d.value = +d.value;
         d.width = +d.weight;
+        d.suffix = suffix;
         d.label = d.label;
     });
 
-    var width = 500,
-        height = 450;
+    var width = 550,
+        height = 500;
 
     if (window.screen.width < 480) {
         width = 350;
@@ -60,7 +62,7 @@ function drawAsterChart(chart_data, suffix) {
     var radius = Math.min(width, height) / 2,
         innerRadius = 0.355 * radius;
     if (window.screen.width < 480) {
-        innerRadius += 10;
+        innerRadius += 17;
     }
     var pie = d3.layout.pie()
         .sort(null)
@@ -91,7 +93,7 @@ function drawAsterChart(chart_data, suffix) {
         .innerRadius(innerRadius)
         .outerRadius(radius);
 
-    var svg = d3.select(".aster-chart-container").append("svg")
+    window.svg = d3.select(".aster-chart-container").append("svg")
         .attr("width", width)
         .attr("height", height)
         .append("g")
@@ -119,8 +121,10 @@ function drawAsterChart(chart_data, suffix) {
         .attr("class", "solidArc")
         .attr("stroke", "black")
         .attr("d", arc)
+	    .on('click', select_wedge)
         .on('mouseover', tip.show)
-        .on('mouseout', tip.hide);
+        .on('mouseout', tip.hide)
+        .each(stash);
 
     // calculate the weighted mean score
     var score = data.reduce(function (a, b) {
@@ -134,11 +138,43 @@ function drawAsterChart(chart_data, suffix) {
     addDescriptionToAsterChart(fulltext, svg);
 }
 
+// Stash the old values for transition.
+function stash(d) {
+  d.x0 = d.x;
+  d.dx0 = d.dx;
+}
+
+// What happens when a wedge is clicked
+function select_wedge(d){
+	// Remove old text
+
+	$( ".aster-score" ).each(function(){
+		$(this).remove();
+	});
+
+	//Reset Colors
+	svg.selectAll(".solidArc")
+	.attr("stroke", d3.rgb("black"))
+	.attr("stroke-width", "1");
+	// Text placed in the middle
+    var fulltext = d.data.label + ": " + d.data.value + " " + d.data.suffix;
+    fulltext = fulltext.toString();
+	addDescriptionToAsterChart(fulltext, svg);
+
+	//Color selected wedge
+	d3.select(this)
+	.attr("stroke", d3.rgb("black"))
+	.attr("stroke-width", "1");
+}
+
+
 // Adds description in the middle of the aster chart and regulates the size of text.
 function addDescriptionToAsterChart(fulltext, svg) {
-    var font_size = "13px";
+
+    console.log(fulltext);
+    var font_size = "11px";
     if (window.screen.width < 480){
-        font_size = "11px";
+        font_size = "9px";
     }
     var json_position = {
         0: -38,
@@ -149,17 +185,19 @@ function addDescriptionToAsterChart(fulltext, svg) {
         5: 62
     };
     var a = "";
+    console.log(fulltext.length)
     if (fulltext.length > 11) {
-        a = fulltext.match(/.{6}\S*|.*/g);
+        a = fulltext.match(/.{14}\S*|.*/g);
     } else if (fulltext.length == 8) {
-        a = fulltext.match(/.{4}\S*|.*/g);
+        a = fulltext.match(/.{9}\S*|.*/g);
     } else if (fulltext.length == 9) {
-        a = fulltext.match(/.{3}\S*|.*/g);
+        a = fulltext.match(/.{8}\S*|.*/g);
     } else if (fulltext.length == 10) {
-        a = fulltext.match(/.{4}\S*|.*/g);
+        a = fulltext.match(/.{7}\S*|.*/g);
     } else {
-        a = fulltext.match(/.{5}\S*|.*/g);
+        a = fulltext.match(/.{10}\S*|.*/g);
     }
+
     var index = 0;
     if (a.length <= 2) {
         index = 2;
@@ -172,10 +210,10 @@ function addDescriptionToAsterChart(fulltext, svg) {
     }
 
     var r = /\d+/;
+    console.log(a);
     // alert (s.match(r));
     a.forEach(function (entry) {
         if (entry.match(r)) {
-            var text =
             svg.append("svg:text")
                 .style("font-size", font_size)
                 .attr("class", "aster-score")
