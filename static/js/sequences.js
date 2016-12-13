@@ -25,8 +25,18 @@ var b = {
 var survey_name_translation = {
     "en": " Survey ",
     "sq": " Anketa ",
-    "sr": " Anketa ",
+    "sr": " Anketa "
 };
+
+var satisfaction_colors = {
+    "1": "#E31A1C",
+    "2": "#FD8D3C",
+    "3": "#CCCC00",
+    "4": "#00cc00",
+    "5": "#006600"
+};
+
+var satisfaction_level_indicators = ["A5_A", "A6", "B13", "P5", "P6"];
 
 function drawSequencesChart(data) {
     $("svg").remove();
@@ -65,6 +75,7 @@ function drawSequencesChart(data) {
 }
 
 function buildJsonObject(data, vis, partition, arc) {
+    var selected_indicator = $("#indicator-select").val();
     var items_count = 90;
     var colours = generateColor("#9E0041", "#4D9DB4", items_count / 5);
     var next_colors = generateColor("#FB9F59", "#6CC4A4", items_count / 5);
@@ -83,16 +94,23 @@ function buildJsonObject(data, vis, partition, arc) {
         var agency_name = agency;
         colors[agency_name] = colours[idx + 15];
         idx += 1;
-        colors[survey_name_translation[window.language] + "1"] = "#0066cc";
-        colors[survey_name_translation[window.language] + "2"] = "#c3834c";
         for (var service in data["answer"][agency]) {
             var service_values = data["answer"][agency][service];
             colors[service] = colours[idx];
             idx += 1;
             service = service.replace(/-/g, "").trim();
             agency_name = agency_name.replace(/-/g, "").trim();
-            sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "1", service_values[0]]);
-            sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "2", service_values[1]]);
+            if (satisfaction_level_indicators.indexOf(selected_indicator) == -1) {
+                colors[survey_name_translation[window.language] + "1"] = "#0066cc";
+                colors[survey_name_translation[window.language] + "2"] = "#c3834c";
+                sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "1", service_values[0]]);
+                sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "2", service_values[1]]);
+            } else {
+                sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "1 " + service_values[0], service_values[0]]);
+                sequences.push([agency_name + "-" + service + "-" + survey_name_translation[window.language] + "2 " + service_values[1], service_values[1]]);
+                colors[survey_name_translation[window.language] + "1 " + service_values[0]] = satisfaction_colors[service_values[0]];
+                colors[survey_name_translation[window.language] + "2 " + service_values[1]] = satisfaction_colors[service_values[1]];
+            }
         }
     }
 
@@ -152,7 +170,13 @@ function createVisualization(json, vis, partition, arc) {
 function mouseover(d) {
     var percentage = (d.value);
     var depth = d.depth;
-    var percentageString = d.name + "<br/>";
+    var selected_indicator = $("#indicator-select").val();
+    var percentageString = "";
+    if (satisfaction_level_indicators.indexOf(selected_indicator) == -1) {
+        percentageString = d.name + "<br/>";
+    } else {
+        percentageString = d.name.substr(0, d.name.length - 2) + "<br/>";
+    }
     if (window.suffix == undefined) {
         window.suffix = "";
     }
@@ -242,6 +266,7 @@ function breadcrumbPoints(d, i) {
 
 // Update the breadcrumb trail to show the current sequence and percentage.
 function updateBreadcrumbs(nodeArray, percentageString, percentage) {
+    var selected_indicator = $("#indicator-select").val();
     if (percentageString.length > 30) {
         percentageString = percentageString.substring(0, 30) + "...";
     }
@@ -268,7 +293,13 @@ function updateBreadcrumbs(nodeArray, percentageString, percentage) {
         .attr("dy", "0.35em")
         .attr("text-anchor", "middle")
         .html(function (d) {
-            return d.name.length > 30 ? d.name.substring(0, 30) + "..." : d.name;
+            var name = "";
+            if (satisfaction_level_indicators.indexOf(selected_indicator) != -1) {
+                name = d.name.substr(0, d.name.length - 2);
+            } else {
+                name = d.name;
+            }
+            return d.name.length > 30 ? name.substring(0, 30) + "..." : name;
         });
 
     // Set position for entering and updating nodes.
